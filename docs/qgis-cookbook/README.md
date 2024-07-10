@@ -209,10 +209,10 @@ Exec=bash -c 'source ~/pyenv/qgis/bin/activate && qgis %F'
 cp /usr/share/applications/org.qgis.qgis.desktop ~/.local/share/applications/.
 # then edit
 ```
-### locations
+### other useful locations
 ```bash
 # user plugin directory
-~/.local/share/QGIS/QGIS3/profiles/default/python/plugins/example_plugin
+~/.local/share/QGIS/QGIS3/profiles/default/python/plugins/fireanalyticstoolbox
 # processing plugin directory
 /usr/share/qgis/python/plugins/processing
 ```
@@ -244,10 +244,10 @@ This QGIS version includes its own python, so be careful to use it instead of sy
 % ./python3 -m pip install --upgrade matplotlib
 ```
 
-### locations
+### other useful locations
 ```zsh
 # user plugin folder
-~/Library/Application\ Support/QGIS/QGIS3/profiles/default/python/plugins/example_plugin
+~/Library/Application\ Support/QGIS/QGIS3/profiles/default/python/plugins/fireanalyticstoolbox
 # python location
 /Applications/QGIS.app/Contents/MacOS/bin
 ```
@@ -342,6 +342,16 @@ Copy and modify `python-qgis.bat` that comes in QGIS `bin` folder, in these 3 st
 ```
 
 ![](img/qgis_windows_activate_venv.gif){: width="75%" }
+
+### other useful locations
+```batch
+# user plugin folder
+%AppData%\QGIS\QGIS3\profiles\default\python\plugins\fireanalyticstoolbox
+# shell location
+%ProgramFiles%\QGIS 3.36.1\OSGeo4W.bat
+# python location
+%ProgramFiles%\QGIS 3.36.1\apps\Python39
+```
 
 ---
 [QGIS]: https://qgis.org
