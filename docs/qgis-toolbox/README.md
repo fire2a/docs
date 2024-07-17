@@ -52,20 +52,25 @@ Clearly delimites: inputs, outputs, algorithms and contexts; achieving seamless 
 * **Developers** should clone our repos ([toolbox-repo], [c2f-repo], [fire2a-lib-repo]), compile cell2fire, symlink and setup additional python dependencies to contribute ([tl;dr](/docs/docs/Cell2Fire/README.html#unix-overview))
 
 # First test run
-(Check gif at the end!) Getting or generating a fuel model raster can be challenging (tutorial coming soon), so the simplest way is to:
+(Check the video at the end!) Getting or generating a fuel model raster can be challenging (tutorial coming soon), so the simplest way is to:
 1. Use the downloader algorithm <img src="./img/downloader.svg"  style="height: 16px"> to get a prepared instance
 2. Save an empty [project] into the downloaded folder (where fuels, elevation and Weather.csv files are)
 3. Drag and drop layers from the project home (file Browser Panel) into the Layer Panel
 4. Set the same CRS to the layers and project (any in meters suffices)
 5. Open the simulator algorithm <img src="./img/forestfire.svg"  style="height: 16px">, select the proper fuelmodel (Canada, Kitral or S&B), select the fuel layer in the fuel dropdown, press run.
 
-<a name="anchor">
-![](img/first_run.gif){: width="75%" }
-</a>
+<a name="anchor"> </a>
+<video controls loop style="width: 100%;">
+  <source src="./img/first_run.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 Note: Step 2 can be skipped but it is cumbersome to select each layer from file explorers than to use the dropdown to select between current loaded layers; Also `Weather.csv` is automatically selected when there's a saved project.
 
-![](img/algo_sim-first_run.gif){: width="95%" }
+<video controls loop style="width: 95%;">
+  <source src="./img/algo_sim-first_run.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 # Deployed algorithms
 

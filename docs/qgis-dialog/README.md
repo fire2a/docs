@@ -42,7 +42,10 @@ This softwares enables you to simulate thousand of forest fires on a landscape u
 4. [Install the plugin inside QGIS](#activate)
 
 <figure>
-    <img src="img/win_install_script.gif" width=66% alt='missing'>
+    <video controls loop style="width: 66%;">
+        <source src="img/win_install_script.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
     <figcaption>executing installer</figcaption>
 </figure>
 

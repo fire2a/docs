@@ -41,8 +41,9 @@ Contact us at <a href="mailto:fire2a@fire2a.com">fire2a@fire2a.com</a>.
     ruby -v
     node -v
     # clean
+    git clean -dfX -n
     rm Gemfile.lock
-    rm -r vendor/bundle
+    rm -r .bundle vendor/bundle
     bundle clean --force
     # rebuild
 
