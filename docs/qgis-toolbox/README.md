@@ -60,7 +60,10 @@ Clearly delimites: inputs, outputs, algorithms and contexts; achieving seamless 
 5. Open the simulator algorithm <img src="./img/forestfire.svg"  style="height: 16px">, select the proper fuelmodel (Canada, Kitral or S&B), select the fuel layer in the fuel dropdown, press run.
 
 <a name="anchor">
-![](img/first_run.gif){: width="75%" }
+<video controls loop style="width: 100%;">
+  <source src="./img/first_run.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 </a>
 
 Note: Step 2 can be skipped but it is cumbersome to select each layer from file explorers than to use the dropdown to select between current loaded layers; Also `Weather.csv` is automatically selected when there's a saved project.
