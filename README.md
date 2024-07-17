@@ -16,7 +16,7 @@ Contact us at <a href="mailto:fire2a@fire2a.com">fire2a@fire2a.com</a>.
 [just-the-docs-licence](./just-the-docs-LICENCE)
 
 ## local hosting on debian
-### install
+### install & build
 
     sudo apt-get install ruby-full ruby-bundler jekyll build-essential
     cd repo/root/
@@ -31,6 +31,20 @@ Contact us at <a href="mailto:fire2a@fire2a.com">fire2a@fire2a.com</a>.
     ...
     Server address: http://127.0.0.1:4000
     ...
+
+### update just-the-docs
+    
+    # Check the dependabot automatic pull request
+    git pull
+    git switch dependabot/bundler/just-the-docs-0.8.2
+    # check compatibility
+    ruby -v
+    node -v
+    # clean
+    rm Gemfile.lock
+    rm -r vendor/bundle
+    bundle clean --force
+    # rebuild
 
 ### references
 https://github.com/just-the-docs/just-the-docs
