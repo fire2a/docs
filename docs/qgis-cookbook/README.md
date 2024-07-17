@@ -53,30 +53,35 @@ Clear and concise descriptions are paramount when submitting a bug report. Pleas
 There are 3 ways of installing plugins, the recommended (using a our custom repo source) takes care of prompting the user in QGIS's message bar for updates. "Install from ZIP" is for testers looking for beta versions, and "placing a directory" is for developers symlinking their repo.
 
 ## Install fire2a toolbox
-(check explainer gif after for steps 3 and 4)
-1. Install QGIS for [Linux🗽](#linux-), [MacOS](#macos-) or [Windows](#windows-)  
-_English language version is more reliable_  
-__Don't open it yet!__  
-_Decision Optimization algorithm users __beware__: At the moment (May 1st 2024, and for the last year), IBM has not released a python >3.10 compatible version. So QGIS<=3.36.0 is required for using CPLEX (CBC is included and works fine except for large rasters)_  
+(check explainer video after for steps 3 and 4)
+1. Install QGIS for [Linux🗽](#linux-), [MacOS](#macos-) or [Windows](#windows-)
+   _English language version is more reliable_
+   __Don't open it yet!__
+   _Decision Optimization algorithm users __beware__: At the moment (May 1st 2024, and for the last year), IBM has not released a python >3.10 compatible version. So QGIS<=3.36.0 is required for using CPLEX (CBC is included and works fine except for large rasters)_
 2. Install python dependencies for [Linux🗽](#python), [MacOS](#python-1), [Windows](#python-2) ... or [last resort](forcing-python-requirements.html)
-3. Add fire2a's plugin repo/store [URL][toolbox-server] to custom plugin sources *(open here!)*   
-* [tutorial][custom] 
-* `Menu: 'Plugins' > 'Manage and Install Plugins...' > 'Settings' > Plugin Repositories 'Add' > fill Name & paste URL > Ok`  
-![](img/tldr_add_plugin_source.png){: width="55%" }
-<a name="anchor">
-![](img/install_plugin_server.gif){: width="75%" }
-</a>
-* Note: removing the repo server does not uninstall its plugins
+3. Add fire2a's plugin repo/store [URL][toolbox-server] to custom plugin sources *(open here!)*
+   * [tutorial][custom]
+   * `Menu: 'Plugins' > 'Manage and Install Plugins...' > 'Settings' > Plugin Repositories 'Add' > fill Name & paste URL > Ok`<br>
+     ![](img/tldr_add_plugin_source.png){: width="55%" }<br>
+     <a name="anchor"> </a>
+     <video controls loop style="width: 75%;">
+       <source src="img/install_plugin_server.mp4" type="video/mp4">
+       Your browser does not support the video tag.
+     </video>
+   * Note: removing the repo server does not uninstall its plugins
 
-4. Do a regular new plugin installation 
-* [tutorial][new plugin]
-* `Menu: 'Plugins' > 'Manage and Install Plugins...' > 'Not installed' > search box 'fire' > select > 'Install Plugin' > 'Ok'`
-* Note: *At the time of writing the `Plugin Dependencies Manager` wait wheel spins forever, press `Ok` rightaway; you already installed them in step 2*
-* If it doesn't appear right away on the Processing Toolbox panel:  
-&nbsp;A. toggle the checkbox next to its name in the `Installed` section of the `Plugin Manager`  
-&nbsp;B. restart QGIS  
-![](img/tldr_install_plugin.png){: width="55%" }
-![](img/install_fire2a_toolbox.gif){: width="95%" }
+4. Do a regular new plugin installation
+   * [tutorial][new plugin]
+   * `Menu: 'Plugins' > 'Manage and Install Plugins...' > 'Not installed' > search box 'fire' > select > 'Install Plugin' > 'Ok'`
+   * Note: *At the time of writing the `Plugin Dependencies Manager` wait wheel spins forever, press `Ok` right away; you already installed them in step 2*
+   * If it doesn't appear right away on the Processing Toolbox panel:<br>
+         A. toggle the checkbox next to its name in the `Installed` section of the `Plugin Manager`<br>
+         B. restart QGIS<br>
+   <img src="img/tldr_install_plugin.png" style="width: 55%;" alt="Plugin Installation">
+   <video controls loop style="width: 95%;">
+         <source src="img/install_fire2a_toolbox.mp4" type="video/mp4">
+         Your browser does not support the video tag.
+   </video>
 
 <a href="#top">back to top</a>
 {: style="text-align: right;"}
@@ -128,7 +133,10 @@ For example, unzip `example_plugin_v1.2.3.zip`, inside, a folder named `example_
 ## Install/Update troubleshoot
 Sometimes after an update, the plugin doesn't appear on the Processing Toolbox panel: Reload it by pressing on the checkbox next to its name in the `Installed` section of the `Plugin Manager` or restart QGIS.
 
-![](img/checkbox_refresh_reloads_plugin.gif){: width="85%" }
+<video controls loop style="width: 95%;">
+  <source src="./img/checkbox_refresh_reloads_plugin.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 <a href="#top">back to top</a>
 {: style="text-align: right;"}
 
@@ -276,7 +284,10 @@ Windows version of QGIS comes bundled with its own python, a special launcher mu
 2. Activate QGIS python by starting `OSGeo4W Shell` app `Win button > type OSGeo > select & click` to launch a CMD terminal 
 3. Type `pip install -r "%USERPROFILE%\Downloads\requirements.txt"` press Enter. (Adjust the path as needed, on Windows 11 you can select the file with the secondary button then click 'Copy path', use 2ndary click to paste into CMD terminal)
 
-![](img/install_win_pip_requirements.gif){: width="75%" }
+<video controls loop style="width: 95%;">
+  <source src="img/install_win_pip_requirements.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 If you couldn't understand last 2 steps, try the [last resort](forcing-python-requirements.html) solution.
 
@@ -288,7 +299,7 @@ __Except__ if you'll be running our _Decision Optimization algorithms, specially
 {: style="text-align: right;"}
 
 ### make it writable
-Recommended for machines with a single user, or to share modifications to the environment to all users (explainer gif after)
+Recommended for machines with a single user, or to share modifications to the environment to all users (explainer video after)
 
 Also to integrate a local cplex install with QGIS python environment (see our decision optimization algorithms)
 
@@ -297,9 +308,12 @@ Also to integrate a local cplex install with QGIS python environment (see our de
     - surely: `Win button > type QGIS > 2ndary click > Open file location > 2ndary click > Open file location > click 'bin' folder`
 2. Select `Python39` (check same version), properties, security, ... full control for user.
 
-![](img/qgis_windows_single_user.gif){: width="75%" }
+<video controls loop style="width: 95%;">
+  <source src="./img/qgis_windows_single_user.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
-Also on the gif, a success install of qtconsole being installed on `Program Files\Qgis` and not on user's `%APPDATA%` path, meaning success in making the python environment writable
+Also on the video, a success install of qtconsole being installed on `Program Files\Qgis` and not on user's `%APPDATA%` path, meaning success in making the python environment writable
 
 ### setup CPLEX solver 
 
@@ -322,7 +336,7 @@ To have a location independent launcher that activates the environment in a CMD 
 - for running python scripts using QGIS without the application raised
 - that could be chained into VSCode for development [.vscode\settings.json](https://raw.githubusercontent.com/fire2a/fire2a-lib/main/.vscode/settings.json)
 
-Copy and modify `python-qgis.bat` that comes in QGIS `bin` folder, in these 3 steps (explainer gif after, [sample](https://raw.githubusercontent.com/fire2a/fire2a-lib/main/python-qgis-cmd.bat)):
+Copy and modify `python-qgis.bat` that comes in QGIS `bin` folder, in these 3 steps (explainer video after, [sample](https://raw.githubusercontent.com/fire2a/fire2a-lib/main/python-qgis-cmd.bat)):
 
 1. Open QGIS install folder, open the `bin` folder
     - probably: `C:\Program Files\QGIS 3.45.6\bin` (adjust version)
@@ -341,7 +355,10 @@ Copy and modify `python-qgis.bat` that comes in QGIS `bin` folder, in these 3 st
     cmd.exe /k
 ```
 
-![](img/qgis_windows_activate_venv.gif){: width="75%" }
+<video controls loop style="width: 95%;">
+  <source src="img/qgis_windows_activate_venv.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ### other useful locations
 ```batch

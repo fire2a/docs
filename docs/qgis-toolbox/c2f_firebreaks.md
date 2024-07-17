@@ -12,8 +12,11 @@ Cell2FireW accepts a csv.file defining non-burnable cells, this is easier than m
 
 Even friendlier, the toolbox implements parsing the 1 values of a raster to write and pass it to the simulator.
 
+<video controls loop style="width: 33%;">
+  <source src="./img/algo_sim-firebreak_sample.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
-![](img/algo_sim-firebreak_sample.gif){: width="32%" }
 
 ## Steps
 
@@ -21,7 +24,10 @@ Even friendlier, the toolbox implements parsing the 1 values of a raster to writ
 2. Put ones in the cells you want to be unburnable, this can be achieved 'painting' using serval, or by the output of one of our decision optimization algorithms.
 3. Select the created raster into the 'Firebreak' input dropdown
 
-![](img/create_firebreak.gif){: width="90%" }
+<video controls loop style="width: 90%;">
+  <source src="./img/create_firebreak.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ## Details
 
