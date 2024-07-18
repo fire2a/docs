@@ -37,7 +37,7 @@ Clearly delimites: inputs, outputs, algorithms and contexts; achieving seamless 
 5. **Python script**, working *both* [calling it] from the QGIS [python console] *or* as [standalone code]
 
 # Installing
-[Full guide here](/docs/docs/qgis-cookbook/README.html) or overview:
+[Full guide here](/docs/docs/qgis-cookbook/README.html) or overview (with video):
 1. Install [QGIS] latest version 
    - Support >= 3.36.1 
    - CPLEX Solver in Windows? Stick to 3.36.1 version, read [this now](/docs/docs/qgis-cookbook/README.html#setup-cplex-solver)
@@ -55,6 +55,11 @@ Clearly delimites: inputs, outputs, algorithms and contexts; achieving seamless 
    - Toggle the plugin checkbox (left of <img src="https://raw.githubusercontent.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/main/fireanalyticstoolbox/assets/forestfire.svg" style="height: 16px"> its icon on the Manager list) if it doesn't appear immediately on the Processing Toolbox Panel
 
 **All Done!** On the Processing Toolbox Panel, look for "<img src="https://raw.githubusercontent.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/main/fireanalyticstoolbox/assets/bonfire.svg"  alt='icon-missing' style="height: 16px"> Fire Analytics"
+
+<video controls loop style="width: 95%;">
+  <source src="./img/installation.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 # First test run
 (Check the video at the end!) Getting or generating a fuel model raster can be challenging (tutorial coming soon), so the simplest way is to:
