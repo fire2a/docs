@@ -46,13 +46,13 @@ Clearly delimites: inputs, outputs, algorithms and contexts; achieving seamless 
    - `QGIS menu > Plugins > Manage and Install Plugins > Settings > Add > paste the URL > Ok`
    - _Why custom? Audit our [binaries](https://github.com/fire2a/C2F-W/actions)_
 
-1. Click on the "Not installed" tab, search for "fire" and  install "<img src="https://raw.githubusercontent.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/main/fireanalyticstoolbox/assets/forestfire.svg" style="height: 16px"> Fire Analytics Processing-Toolbox"
+1. Click "Not installed" tab, search "fire", select and install "Fire Analytics Processing-Toolbox"
 
-1. A dialog will ask permission to install the plugin's python dependencies, accept
+1. Accept on the dialog asking permission to install the plugin's python dependencies (if needed)
    - _Save any open work before installing/updating the plugin. Installing & reloading dependencies on the fly_ __could crash QGIS__
-   - You can deny and/or disable (else this check will occur every time the plugin is loaded). Then install [them][fire2a-lib-pypi] [manually](https://github.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/blob/b7af87e35a021005a3d55f7d0d802431296ef196/fireanalyticstoolbox/dependencies_handler.txt#L2)
-   - Toggle the plugin checkbox (left of <img src="https://raw.githubusercontent.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/main/fireanalyticstoolbox/assets/forestfire.svg" style="height: 16px">) if it doesn't appear immediately on the Processing Toolbox Panel
-   - Restart QGIS if anything doesn't succeed (details at: Log Messages > Plugins)
+   - You can deny and disable this check, that happens every time the plugin is loaded. ([Manually][fire2a-lib-pypi] install [them](https://github.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/blob/b7af87e35a021005a3d55f7d0d802431296ef196/fireanalyticstoolbox/dependencies_handler.txt#L2))
+   - Restart QGIS if any install or reloading doesn't succeed (details at: Log Messages > Plugins)
+   - Toggle the plugin checkbox (left of <img src="https://raw.githubusercontent.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/main/fireanalyticstoolbox/assets/forestfire.svg" style="height: 16px"> its icon on the Manager list) if it doesn't appear immediately on the Processing Toolbox Panel
 
 **All Done!** On the Processing Toolbox Panel, look for "<img src="https://raw.githubusercontent.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/main/fireanalyticstoolbox/assets/bonfire.svg"  alt='icon-missing' style="height: 16px"> Fire Analytics"
 
