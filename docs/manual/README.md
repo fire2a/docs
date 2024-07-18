@@ -10,6 +10,25 @@ parent: QGIS Fire Analytics Toolbox
 <h3 align="center">0.2.3</h3>
 <h3 align="center">Fire Management & Advanced Analytics Group</h3>
 ![](images/logo plugin.png)
+<h1 align="center">
+
+Fire Analytics Toolbox
+
+</h1>
+
+<h3 align="center">
+
+0.2.3
+
+</h3>
+
+<h3 align="center">
+
+Fire Management & Advanced Analytics Group
+
+</h3>
+
+![](images/logo%20plugin.png)
 
 # Introducción
 El complemento de QGIS, Fire Analytics Toolbox, es una herramienta informática para la gestión y el análisis de los incendios forestales. Está diseñado para facilitar la simulación de incendios forestales, calcular métricas de riesgo y optimizar la ubicación de tratamiento de combustibles, todo directamente desde QGIS. La interfaz del plugin permite realizar estas tareas de manera intuitiva mediante formularios simples y herramientas de arrastrar y soltar. En este manual se detallan las instrucciones de instalación, configuaraciones iniciales, funciones principales, ejemplos de uso y la solución de problemas que puedan ocurrir durante la utilización de las herramientas.
