@@ -38,18 +38,23 @@ Clearly delimites: inputs, outputs, algorithms and contexts; achieving seamless 
 
 # Installing
 [Full guide here](/docs/docs/qgis-cookbook/README.html) or overview:
-1. [QGIS] version > 3.28.12 (LTR version is mostly compatible but misses, for example, grouping simulation results; latest version is recommended)
-2. fire2a-toolbox installation can *almost* be done straight forward from QGIS **[plugin manager]** *but*:
-    - Python [dependencies][requirements.txt] must be manually resolved  
-    - fire2a's plugin repo/store [link][toolbox-server] must be added as a custom plugin source (*)  
+1. Install [QGIS] latest version 
+   - Support >= 3.36.1 
+   - CPLEX Solver in Windows? Stick to 3.36.1 version, read [this now](/docs/docs/qgis-cookbook/README.html#setup-cplex-solver)
 
-**Done!** *fire2a-toolbox icon <img src="https://raw.githubusercontent.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/main/fireanalyticstoolbox/assets/bonfire.svg"  alt='icon-missing' style="height: 16px"> will appear on the algorithms list of the Processing Toolbox Panel*
+1. Add fire2a's [plugin store URL][toolbox-server] as a custom plugin source
+   - `QGIS menu > Plugins > Manage and Install Plugins > Settings > Add > paste the URL > Ok`
+   - _Why custom? Audit our [binaries](https://github.com/fire2a/C2F-W/actions)_
 
+1. Click on the "Not installed" tab, search for "fire" and  install "<img src="https://raw.githubusercontent.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/main/fireanalyticstoolbox/assets/forestfire.svg" style="height: 16px"> Fire Analytics Processing-Toolbox"
 
-(*) : Because it contains compiled c++ binary code -for Cell2Fire simulator, but binary code cannot be easily verified hence the plugin is not allowed on the [regular repo/store](https://plugins.qgis.org/). Nevertheless all our code is open source, its build is "reproducible" by an automated action; all can be audited on [fire2a@github](https://github.com/fire2a)
+1. A dialog will ask permission to install the plugin's python dependencies, accept
+   - _Save any open work before installing/updating the plugin. Installing & reloading dependencies on the fly_ __could crash QGIS__
+   - You can deny and/or disable (else this check will occur every time the plugin is loaded). Then install [them][fire2a-lib-pypi] [manually](https://github.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/blob/b7af87e35a021005a3d55f7d0d802431296ef196/fireanalyticstoolbox/dependencies_handler.txt#L2)
+   - Toggle the plugin checkbox (left of <img src="https://raw.githubusercontent.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/main/fireanalyticstoolbox/assets/forestfire.svg" style="height: 16px">) if it doesn't appear immediately on the Processing Toolbox Panel
+   - Restart QGIS if anything doesn't succeed (details at: Log Messages > Plugins)
 
-* **Testers** should instead install by `.zip` file from fire2a-toolbox [releases][toolbox-releases]
-* **Developers** should clone our repos ([toolbox-repo], [c2f-repo], [fire2a-lib-repo]), compile cell2fire, symlink and setup additional python dependencies to contribute ([tl;dr](/docs/docs/Cell2Fire/README.html#unix-overview))
+**All Done!** On the Processing Toolbox Panel, look for "<img src="https://raw.githubusercontent.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/main/fireanalyticstoolbox/assets/bonfire.svg"  alt='icon-missing' style="height: 16px"> Fire Analytics"
 
 # First test run
 (Check the video at the end!) Getting or generating a fuel model raster can be challenging (tutorial coming soon), so the simplest way is to:
@@ -142,6 +147,8 @@ Match AII Grid Rasters : Simplifies using gdal translate thrice, to clip extent,
 [toolbox-repo]: https://www.github.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin
 [c2f-repo]: https://www.github.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin
 [fire2a-lib-repo]: https://www.github.com/fire2a/fire2a-lib
+[fire2a-lib-requirements]: https://github.com/fire2a/fire2a-lib/blob/d6a08bd78ba1388e6548170ebfcc20077eff7f5e/pyproject.toml#L20
+[fire2a-lib-pypi]: https://pypi.org/project/fire2a-lib/
 
 
 [graphical model]: https://docs.qgis.org/latest/en/docs/user_manual/processing/modeler.html
@@ -158,3 +165,5 @@ Match AII Grid Rasters : Simplifies using gdal translate thrice, to clip extent,
 [toolbox-server]: https://fire2a.github.io/fire-analytics-qgis-processing-toolbox-plugin/plugins.xml
 [toolbox-releases]: https://github.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/releases
 [project]: https://docs.qgis.org/3.28/en/docs/user_manual/introduction/project_files.html
+
+[forestfire]: https://raw.githubusercontent.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/main/fireanalyticstoolbox/assets/forestfire.svg
