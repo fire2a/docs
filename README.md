@@ -31,7 +31,9 @@ Editing and saving will automatically update the page.
 ```bash
 bundle exec jekyll serve --livereload
 ...
-Server address: http://127.0.0.1:4000 <--- open in browser
+LiveReload address: http://127.0.0.1:35729
+    Server address: http://127.0.0.1:4000  <--- OPEN IN BROWSER
+  Server running... press ctrl-c to stop.
 ```
 ### update just-the-docs
 Dependabot will automatically create a pull request to update the just-the-docs version.
