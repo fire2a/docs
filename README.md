@@ -16,38 +16,39 @@ Contact us at <a href="mailto:fire2a@fire2a.com">fire2a@fire2a.com</a>.
 [just-the-docs-licence](./just-the-docs-LICENCE)
 
 ## local hosting on debian
-### install & build
-
-    sudo apt-get install ruby-full ruby-bundler jekyll build-essential
-    cd repo/root/
-    bundle config set --local path 'vendor/bundle'
-    bundle install
-
-### serve
-
-    bundle exec jekyll serve --livereload
-
-    # ctrl+click here to open
-    ...
-    Server address: http://127.0.0.1:4000
-    ...
-
+### install
+```bash
+sudo apt-get install ruby-full ruby-bundler jekyll build-essential
+```
+### build
+```
+cd <repo/root>
+bundle config set --local path 'vendor/bundle'
+bundle install
+```
+### live serve
+Editing and saving will automatically update the page.  
+```bash
+bundle exec jekyll serve --livereload
+...
+Server address: http://127.0.0.1:4000 <--- open in browser
+```
 ### update just-the-docs
-    
-    # Check the dependabot automatic pull request
-    git pull
-    git switch dependabot/bundler/just-the-docs-0.8.2
-    # check compatibility
-    ruby -v
-    node -v
-    # clean
-    git clean -dfX -n
-    rm Gemfile.lock
-    rm -r .bundle vendor/bundle
-    bundle clean --force
-    # rebuild
+Dependabot will automatically create a pull request to update the just-the-docs version.
+```bash
+git switch dependabot/bundler/just-the-docs-0.8.2
+# check compatibility
+ruby -v
+node -v
+# clean
+git clean -dfX -n
+rm Gemfile.lock
+rm -r .bundle vendor/bundle
+bundle clean --force
+# rebuild
+```
 
 ### references
-https://github.com/just-the-docs/just-the-docs
-https://jekyllrb.com/docs/installation/other-linux/
+https://github.com/just-the-docs/just-the-docs  
+https://jekyllrb.com/docs/installation/other-linux/  
 
