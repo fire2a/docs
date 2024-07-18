@@ -37,19 +37,29 @@ Clearly delimites: inputs, outputs, algorithms and contexts; achieving seamless 
 5. **Python script**, working *both* [calling it] from the QGIS [python console] *or* as [standalone code]
 
 # Installing
-[Full guide here](/docs/docs/qgis-cookbook/README.html) or overview:
-1. [QGIS] version > 3.28.12 (LTR version is mostly compatible but misses, for example, grouping simulation results; latest version is recommended)
-2. fire2a-toolbox installation can *almost* be done straight forward from QGIS **[plugin manager]** *but*:
-    - Python [dependencies][requirements.txt] must be manually resolved  
-    - fire2a's plugin repo/store [link][toolbox-server] must be added as a custom plugin source (*)  
+[Full guide here](/docs/docs/qgis-cookbook/README.html) or overview (with video):
+1. Install [QGIS] latest version 
+   - Support >= 3.36.1 
+   - CPLEX Solver in Windows? Stick to 3.36.1 version, read [this now](/docs/docs/qgis-cookbook/README.html#setup-cplex-solver)
 
-**Done!** *fire2a-toolbox icon <img src="https://raw.githubusercontent.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/main/fireanalyticstoolbox/assets/bonfire.svg"  alt='icon-missing' style="height: 16px"> will appear on the algorithms list of the Processing Toolbox Panel*
+1. Add fire2a's [plugin store URL][toolbox-server] as a custom plugin source
+   - `QGIS menu > Plugins > Manage and Install Plugins > Settings > Add > paste the URL > Ok`
+   - _Why custom? Audit our [binaries](https://github.com/fire2a/C2F-W/actions)_
 
+1. Click "Not installed" tab, search "fire", select and install "Fire Analytics Processing-Toolbox"
 
-(*) : Because it contains compiled c++ binary code -for Cell2Fire simulator, but binary code cannot be easily verified hence the plugin is not allowed on the [regular repo/store](https://plugins.qgis.org/). Nevertheless all our code is open source, its build is "reproducible" by an automated action; all can be audited on [fire2a@github](https://github.com/fire2a)
+1. Accept on the dialog asking permission to install the plugin's python dependencies (if needed)
+   - _Save any open work before installing/updating the plugin. Installing & reloading dependencies on the fly_ __could crash QGIS__
+   - You can deny and disable this check, that happens every time the plugin is loaded. ([Manually][fire2a-lib-pypi] install [them](https://github.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/blob/b7af87e35a021005a3d55f7d0d802431296ef196/fireanalyticstoolbox/dependencies_handler.txt#L2))
+   - Restart QGIS if any install or reloading doesn't succeed (details at: Log Messages > Plugins)
+   - Toggle the plugin checkbox (left of <img src="https://raw.githubusercontent.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/main/fireanalyticstoolbox/assets/forestfire.svg" style="height: 16px"> its icon on the Manager list) if it doesn't appear immediately on the Processing Toolbox Panel
 
-* **Testers** should instead install by `.zip` file from fire2a-toolbox [releases][toolbox-releases]
-* **Developers** should clone our repos ([toolbox-repo], [c2f-repo], [fire2a-lib-repo]), compile cell2fire, symlink and setup additional python dependencies to contribute ([tl;dr](/docs/docs/Cell2Fire/README.html#unix-overview))
+**All Done!** On the Processing Toolbox Panel, look for "<img src="https://raw.githubusercontent.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/main/fireanalyticstoolbox/assets/bonfire.svg"  alt='icon-missing' style="height: 16px"> Fire Analytics"
+
+<video controls loop style="width: 95%;">
+  <source src="./img/installation.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 # First test run
 (Check the video at the end!) Getting or generating a fuel model raster can be challenging (tutorial coming soon), so the simplest way is to:
@@ -67,20 +77,51 @@ Clearly delimites: inputs, outputs, algorithms and contexts; achieving seamless 
 
 Note: Step 2 can be skipped but it is cumbersome to select each layer from file explorers than to use the dropdown to select between current loaded layers; Also `Weather.csv` is automatically selected when there's a saved project.
 
-<video controls loop style="width: 95%;">
-  <source src="./img/algo_sim-first_run.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-
 # Deployed algorithms
 
-**Fire Analytics Toolbox** <img src="https://raw.githubusercontent.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/main/fireanalyticstoolbox/assets/bonfire.svg"  alt='icon-missing' style="height: 16px">
+## **<img src="https://raw.githubusercontent.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/main/fireanalyticstoolbox/assets/bonfire.svg"  alt='icon-missing' style="height: 24px"> Fire Analytics Toolbox** 
 
 <img src="https://raw.githubusercontent.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/main/fireanalyticstoolbox/assets/forestfire.svg"  alt='icon-missing' style="height: 16px">
-: [(Cell2)Fire Simulator](./algo_simulator.html)
+: [**Cell2 Fire Simulator**](./algo_simulator.html)
+
+**Simulator Preparation Help**
 
 <img src="https://raw.githubusercontent.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/main/fireanalyticstoolbox/assets/downloader.svg"  alt='icon-missing' style="height: 16px">
-: (Simulator) Instances Downloader
+: Simulator **Instances Downloader**, gets ready to simulate instances
+
+<img src="https://raw.githubusercontent.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/main/fireanalyticstoolbox/assets/match_aii.svg"  alt='icon-missing' style="height: 16px">
+: **Match AII Grid** Rasters: Simplifies using gdal translate thrice, to clip extent, then resize and replace geotransform to match an ascii raster into another
+
+<img src="https://raw.githubusercontent.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/main/fireanalyticstoolbox/assets/meteo.svg"  alt='icon-missing' style="height: 16px">
+: **Meteo**: Simplifies creating Chilean -Kitral fuel model compatible- weather files
+
+**Simulator Post Processing (simpp)**
+
+<img src="https://raw.githubusercontent.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/main/fireanalyticstoolbox/assets/cog.svg"  alt='icon-missing' style="height: 16px">
+: **Bundle**: all following algorithms combined for convenience
+
+<img src="https://raw.githubusercontent.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/main/fireanalyticstoolbox/assets/ignitionpoint.svg"  alt='icon-missing' style="height: 16px">
+: **Ignition Point(s)**: reads the ignition history file from the simulator outputs, creates a point layer
+
+<img src="https://raw.githubusercontent.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/main/fireanalyticstoolbox/assets/bodyscar.svg"  alt='icon-missing' style="height: 16px">
+: **Fire Scar(s)**: reads the csv.Grids files from the simulator outputs, creates: final scars raster layer, propagation scars polygons & burn probability
+
+<img src="https://raw.githubusercontent.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/main/fireanalyticstoolbox/assets/burntime.svg"  alt='icon-missing' style="height: 16px">
+: **Propagation Digraph**: reads the csv.Messages files from the simulator outputs, creates a directed graph of the fire propagation, each arrow labeled with the time spread
+
+<img src="https://raw.githubusercontent.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/main/fireanalyticstoolbox/assets/fireface.svg"  alt='icon-missing' style="height: 16px">
+: **Spatial Statistics**:, any of: Hit Rate Of Spread, Flame Length, Byram Fire Line Intensity, Crown Fire Scar, Crown Fire Fuel Consumption Ratio, Surface Burn Fraction
+
+**Simulator Risk Metrics**
+
+<img src="https://raw.githubusercontent.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/main/fireanalyticstoolbox/assets/dpv.svg"  alt='icon-missing' style="height: 16px">
+: **DownStream Protection Value**
+
+<img src="https://raw.githubusercontent.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/main/fireanalyticstoolbox/assets/bc.svg"  alt='icon-missing' style="height: 16px">
+: **Betweenness Centrality**
+
+<img src="https://raw.githubusercontent.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/main/fireanalyticstoolbox/assets/bodyscar.svg"  alt='icon-missing' style="height: 16px">
+: **Burn Probability**, get it from Fire Scars
 
 **Decision optimization**
 
@@ -99,38 +140,6 @@ Note: Step 2 can be skipped but it is cumbersome to select each layer from file 
 <img src="https://raw.githubusercontent.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/main/fireanalyticstoolbox/assets/firebreakmap.svg"  alt='icon-missing' style="height: 16px">
 : Raster treatment & teams optimization : Maximize the changed value of the treated raster, deciding which treatment to apply by which team to each pixel (or no change), subject to budget, area constraints and team capabilities
 
-**Simulator Post Processing (simpp)**
-
-Bundle: all post processing combined for convenience
-
-<img src="https://raw.githubusercontent.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/main/fireanalyticstoolbox/assets/ignitionpoint.svg"  alt='icon-missing' style="height: 16px">
-: Ignition Point(s)
-
-<img src="https://raw.githubusercontent.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/main/fireanalyticstoolbox/assets/bodyscar.svg"  alt='icon-missing' style="height: 16px">
-: (Propagation) Fire Scar(s)
-
-<img src="https://raw.githubusercontent.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/main/fireanalyticstoolbox/assets/burntime.svg"  alt='icon-missing' style="height: 16px">
-: Propagation Digraph
-
-<img src="https://raw.githubusercontent.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/main/fireanalyticstoolbox/assets/fireface.svg"  alt='icon-missing' style="height: 16px">
-: Spatial Statistics, any of: Hit Rate Of Spread, Flame Length, Byram Fire Line Intensity, Crown Fire Scar, Crown Fire Fuel Consumption Ratio, Surface Burn Fraction
-
-**simpp Risk Metrics**
-
-<img src="https://raw.githubusercontent.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/main/fireanalyticstoolbox/assets/dpv.svg"  alt='icon-missing' style="height: 16px">
-: DownStream Protection Value
-
-<img src="https://raw.githubusercontent.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/main/fireanalyticstoolbox/assets/bc.svg"  alt='icon-missing' style="height: 16px">
-: Betweenness Centrality
-
-<img src="https://raw.githubusercontent.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/main/fireanalyticstoolbox/assets/bodyscar.svg"  alt='icon-missing' style="height: 16px">
-: Burn Probability
-
-**Auxiliary**
-
-Match AII Grid Rasters : Simplifies using gdal translate thrice, to clip extent, then resize and replace geotransform to match an ascii raster into another
-
-
 ---
 [QGIS]: https://qgis.org
 
@@ -142,6 +151,8 @@ Match AII Grid Rasters : Simplifies using gdal translate thrice, to clip extent,
 [toolbox-repo]: https://www.github.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin
 [c2f-repo]: https://www.github.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin
 [fire2a-lib-repo]: https://www.github.com/fire2a/fire2a-lib
+[fire2a-lib-requirements]: https://github.com/fire2a/fire2a-lib/blob/d6a08bd78ba1388e6548170ebfcc20077eff7f5e/pyproject.toml#L20
+[fire2a-lib-pypi]: https://pypi.org/project/fire2a-lib/
 
 
 [graphical model]: https://docs.qgis.org/latest/en/docs/user_manual/processing/modeler.html
@@ -158,3 +169,5 @@ Match AII Grid Rasters : Simplifies using gdal translate thrice, to clip extent,
 [toolbox-server]: https://fire2a.github.io/fire-analytics-qgis-processing-toolbox-plugin/plugins.xml
 [toolbox-releases]: https://github.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/releases
 [project]: https://docs.qgis.org/3.28/en/docs/user_manual/introduction/project_files.html
+
+[forestfire]: https://raw.githubusercontent.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/main/fireanalyticstoolbox/assets/forestfire.svg
