@@ -4,35 +4,13 @@ title: Manual
 nav_order: 3
 has_toc: false
 parent: QGIS Fire Analytics Toolbox
-output: 
-  html_document:
-    toc: true
-    toc_depth: 3   
-    toc_float: 
-      collapsed: true
-      smooth_scroll: true
 ---
 
 ![](images/logo_plugin.png)
 
-<h3 align="center">
-
-**Manual de usuario QGIS Fire\
-Analytics Toolbox**
-
-</h1>
-
-<h3 align="center">
-
-0.2.3
-
-</h3>
-
-<h3 align="center">
-
-Fire Management & Advanced Analytics Group
-
-<div align="justify">
+<h2 align="center">Manual de usuario</h2>
+<h1 align="center">QGIS Fire Analytics Toolbox</h1>
+<h2 align="center">v0.3.0<br><br>Fire Management & Advanced Analytics Group</h2>
 
 # Introducción
 
