@@ -216,6 +216,9 @@ Exec=bash -c 'source ~/pyenv/qgis/bin/activate && qgis %F'
 # If not found on your user's files it's on system launchers, copy it:
 cp /usr/share/applications/org.qgis.qgis.desktop ~/.local/share/applications/.
 # then edit
+
+# GNOME
+update-desktop-database ~/.local/share/applications/
 ```
 ### other useful locations
 ```bash
