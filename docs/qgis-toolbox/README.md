@@ -84,7 +84,7 @@ Note: Step 2 can be skipped but it is cumbersome to select each layer from file 
 <img src="https://raw.githubusercontent.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/main/fireanalyticstoolbox/assets/forestfire.svg"  alt='icon-missing' style="height: 16px">
 : [**Cell2 Fire Simulator**](./algo_simulator.html)
 
-**Simulator Preparation Help**
+**Utils**
 
 <img src="https://raw.githubusercontent.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/main/fireanalyticstoolbox/assets/downloader.svg"  alt='icon-missing' style="height: 16px">
 : Simulator **Instances Downloader**, gets ready to simulate instances
@@ -94,6 +94,9 @@ Note: Step 2 can be skipped but it is cumbersome to select each layer from file 
 
 <img src="https://raw.githubusercontent.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/main/fireanalyticstoolbox/assets/meteo.svg"  alt='icon-missing' style="height: 16px">
 : **Meteo**: Simplifies creating Chilean -Kitral fuel model compatible- weather files
+
+<img src="https://raw.githubusercontent.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/main/fireanalyticstoolbox/assets/polygonize.png"  alt='icon-missing' style="height: 16px">
+: **Polygonize weighted rasters**: A pipeline for creating polygons from multiple raster layers; with nodata and scaling strategies, categorical rasters handling and weight attribute. [algorithm][fire2a-lib-clustering-docs]
 
 **Simulator Post Processing (simpp)**
 
@@ -121,7 +124,7 @@ Note: Step 2 can be skipped but it is cumbersome to select each layer from file 
 : **Betweenness Centrality**
 
 <img src="https://raw.githubusercontent.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/main/fireanalyticstoolbox/assets/bodyscar.svg"  alt='icon-missing' style="height: 16px">
-: **Burn Probability**, get it from Fire Scars
+: **Burn Probability**,  a subset of the fire scar algorithm
 
 **Decision optimization**
 
@@ -153,6 +156,7 @@ Note: Step 2 can be skipped but it is cumbersome to select each layer from file 
 [fire2a-lib-repo]: https://www.github.com/fire2a/fire2a-lib
 [fire2a-lib-requirements]: https://github.com/fire2a/fire2a-lib/blob/d6a08bd78ba1388e6548170ebfcc20077eff7f5e/pyproject.toml#L20
 [fire2a-lib-pypi]: https://pypi.org/project/fire2a-lib/
+[fire2a-lib-clustering-docs]: https://fire2a.github.io/fire2a-lib/fire2a/agglomerative_clustering.html
 
 
 [graphical model]: https://docs.qgis.org/latest/en/docs/user_manual/processing/modeler.html
