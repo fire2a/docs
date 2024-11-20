@@ -1,0 +1,9 @@
+En esta seccion se detalla un ejemplo de uso utilizando una instancia descargada del Instance Donwloader correspondiente a la zona de Villarica. Tambien se muestra la obtencion de distintos resultados y su visualizacion dentro de QGIS.
+
+\begin{enumerate}
+    \item Descargar la instancia usando Instance Downloader. Durante todo el proceso se escogió el área de Villarica, correspondiente al modelo de combustibles de Kitral. A continuación se dejan imágenes para seguir el proceso paso a paso.
+    
+    \item Correr el algoritmo Cell2Fire simulator
+    \item Algoritmos de post procesamiento
+    \item Algoritmos de decisión
+\end{enumerate}
