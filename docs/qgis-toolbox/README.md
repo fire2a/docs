@@ -95,13 +95,8 @@ Note: Step 2 can be skipped but it is cumbersome to select each layer from file 
 <img src="https://raw.githubusercontent.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/main/fireanalyticstoolbox/assets/meteo.svg"  alt='icon-missing' style="height: 16px">
 : **Meteo**: Simplifies creating Chilean -Kitral fuel model compatible- weather files
 
-<details closed markdown="block">
-  <summary>
 <img src="https://raw.githubusercontent.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/main/fireanalyticstoolbox/assets/polygonize.png"  alt='icon-missing' style="height: 16px">
 : **Polygonize weighted rasters**: A pipeline for creating polygons from multiple raster layers; with nodata and scaling strategies, categorical rasters handling and weight attribute. [algorithm][fire2a-lib-clustering-docs]
-  </summary>
-  <source src="./img/algo_polygonize_rasters.mp4" type="video/mp4">
-</details>
 
 **Simulator Post Processing (simpp)**
 
