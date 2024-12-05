@@ -80,7 +80,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  jekyll (~> 4.3.3)
+  jekyll (~> 4.3.4)
   jekyll-avatar (~> 0.8.0)
   just-the-docs (= 0.10.0)
 
