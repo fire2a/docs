@@ -143,6 +143,9 @@ Note: Step 2 can be skipped but it is cumbersome to select each layer from file 
 <img src="https://raw.githubusercontent.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/main/fireanalyticstoolbox/assets/firebreakmap.svg"  alt='icon-missing' style="height: 16px">
 : Raster treatment & teams optimization : Maximize the changed value of the treated raster, deciding which treatment to apply by which team to each pixel (or no change), subject to budget, area constraints and team capabilities
 
+{: .warning}
+By default QGIS limits the processing algorithms log to about 5000 lines. In the rare case you really need the full log, see running in the console
+
 ---
 [QGIS]: https://qgis.org
 
