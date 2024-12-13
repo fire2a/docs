@@ -144,7 +144,7 @@ Note: Step 2 can be skipped but it is cumbersome to select each layer from file 
 : Raster treatment & teams optimization : Maximize the changed value of the treated raster, deciding which treatment to apply by which team to each pixel (or no change), subject to budget, area constraints and team capabilities
 
 {: .warning}
-By default QGIS limits the processing algorithms log to about 5000 lines. In the rare case you really need the full log, see running in the console
+By default QGIS limits the processing algorithms log to about 5000 lines. In the rare case you really need the full log, see number 4 and 5 of [usage alternatives](https://fire2a.github.io/docs/docs/qgis-toolbox/README.html#usage-alternatives)
 
 ---
 [QGIS]: https://qgis.org
