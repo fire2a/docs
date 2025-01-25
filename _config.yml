@@ -1,7 +1,7 @@
 # https://just-the-docs.github.io/just-the-docs/docs/configuration/
 
-title: Fire2a Documentación
-description: Documentación para herramientas publicadas del grupo de investigación Fire2a
+title: Fire2a User Documentation
+description: User documentation of tools & software published by Fire2a research group.
 theme: just-the-docs
 url: "https://fire2a.github.io/docs"
 repository: fire2a/docs
@@ -9,7 +9,7 @@ repository: fire2a/docs
 # color_scheme: nil
 
 aux_links:
-  "View on github": https://github.com/fire2a/documentacion
+  "View on github": https://github.com/fire2a/docs
 
 aux_links_new_tab: true
 
@@ -77,19 +77,19 @@ search:
 callouts:
   # grey-lt, grey-dk, purple, blue, green, yellow, red
   success:
-    title: Éxito
+    title: Success
     color: green
     opacity: 0.3
   info:
-    title: Información
+    title: Information
     color: blue
     opacity: 0.3
   warning:
-    title: Advertencia
+    title: Warning
     color: yellow
     opacity: 0.3
   critical:
-    title: Crítico
+    title: Critical
     color: red
     opacity: 0.3
 
