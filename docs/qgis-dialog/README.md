@@ -1,10 +1,10 @@
----
-layout: default
-title: QGIS dialog DEPRECATED
-nav_order: 97
-has_children: true
-has_toc: false
----
+# ---
+# layout: default
+# title: QGIS dialog DEPRECATED
+# nav_order: 97
+# has_children: true
+# has_toc: false
+# ---
 
 # Cell 2 Fire QGIS plugin
 {: .no_toc}
