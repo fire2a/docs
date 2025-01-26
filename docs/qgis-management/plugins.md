@@ -27,14 +27,19 @@ There are several ways to install plugins, using the plugin manager is the most 
 ## _Install a custom app repository_ [official guide](https://docs.qgis.org/latest/en/docs/training_manual/qgis_plugins/fetching_plugins.html#follow-along-configuring-additional-plugin-repositories)
 To install our plugin, add fire2a's [plugin store URL][toolbox-server] as a custom plugin source
 - `QGIS menu > Plugins > Manage and Install Plugins > Settings > Add > paste the URL > Ok`
+- On the `Not Installed` tab search `Fire` and install `Fire Analytics Processing-Toolbox`
 - _Why custom? Audit our [binaries](https://github.com/fire2a/C2F-W/actions)_
 <video controls loop style="width: 95%;">
-     <source src="img/install_plugin_server.mp4" type="video/mp4">
+     <source src="img/plugin_install_custom_store_with_audio.mp4" type="video/mp4">
      Your browser does not support the video tag.
 </video>
 ## _Load a zip release file_
 - For example, download the [latest release](https://github.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/releases/latest) of our plugin.
 - Install it using the `Install from ZIP` in the `Plugin Manager`
+<video controls loop style="width: 95%;">
+     <source src="img/plugin_install_zip_release.mp4" type="video/mp4">
+     Your browser does not support the video tag.
+</video>
 ## Or skip the plugin manager and _manually place the plugin into the plugins directory_
 Using `fireanalyticstoolbox` as an example:
 ### Linux 🗽
