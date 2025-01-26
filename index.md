@@ -1,19 +1,21 @@
 ---
 title: Home
 layout: home
-nav_order: 99
 ---
-Welcome to the Fire2a research group documentation, choose your component:
+Welcome to Fire2a's research group user documentation, choose your component:
 
 [__QGIS Fire Analytics Toolbox__](docs/qgis-toolbox/README.html): Our research as **user friendly graphical tools**: Simulate wildfires, get risk metrics, optimize firebreak location, etc. All from within [QGIS]. **Simple as filling a form**. Also available: drag'n'drop boxes (algorithms) into a *GIS-data-science-pipeline*.
 
-[__Cell2Fire++__](docs/Cell2Fire/README.html): Forest fire simulator ([Forked]) and improved ([Here]). Supports Canada, Kitral, S&B fuel models , surface and crown fire, deals with weather scenarios, surface and vegetation moisture content; various output metrics. Also enhances in memory management, platform support, etc. **C++ only command line interface.**
+[__Cell2FireW__](docs/Cell2Fire/README.html): Forest fire simulator ([Forked]) and improved ([Here]). Supports Canada, Kitral, S&B fuel models , surface and crown fire, deals with weather scenarios, surface and vegetation moisture content; various output metrics. Also enhances in memory management, platform support, etc. **C++ only command line interface.**
 
 [__Algorithms Library__](docs/fire2a-lib.html) of common tasks & patterns of GIS. Also showcasing proof of concepts and special algorithms developed such as landscape clustering, firebreak optimization allocation, downstream protection value, etc. **A python package.**
 
-[__QGIS Cookbook__](docs/qgis-cookbook/README.html): Install & setup guides, python environments, plugins and workflows examples.
+[__QGIS cookbook__](docs/qgis-cookbook/README.html): Install & setup guides, python environments, plugins and workflows examples.
 
-[__QGIS dialog DEPRECATED__](docs/qgis-dialog/README.html): Simulate forest fires, get valuable metrics, in a user friendly graphical interface through [QGIS]. __Not maintained__
+[__QGIS management__](docs/qgis-cookbook/README.html): Install & setup guides, python environments, plugins and workflows examples.
+
+[__Getting help__](docs/getting-help/index.html): How to reach us, before getting help checklist, help message indispensables.
+
 
 # About us
 
@@ -25,18 +27,23 @@ Contact us at <a href="mailto:fire2a@fire2a.com">fire2a@fire2a.com</a>.
 
 Visit our public <a href="http://www.fire2a.com">webpage</a>.
 
-[{% avatar fire2a %}](https://github.com/fire2a/)
-[{% avatar jaimecarrasco %}](https://github.com/jaimecarrasco/)
-[{% avatar lucasmurray97 %}](https://github.com//lucasmurray97/)
-[{% avatar FelipedlB %}](https://github.com/FelipedlB/)
-[{% avatar fulloaf %}](https://github.com/fulloaf/)
-[{% avatar fdobad size=40 %}](https://github.com/fdobad/)
 [![](docs/assets/aw.png){: width="40" }](https://www.dii.uchile.cl/~aweintra/)
+[{% avatar caro %}](https://github.com/car0espinoza/)
+[{% avatar fdobad %}](https://github.com/fdobad/)
+[{% avatar felipe %}](https://github.com/FelipedlB/)
+[{% avatar jaime %}](https://github.com/jaimecarrasco/)
+[{% avatar matiasuno %}](https://github.com/matiasuno/)
+[{% avatar matilde %}](https://github.com/matilderivas/)
+[{% avatar rodrigo %}](https://github.com/RodrigoMahalufRecasens/)
 
-
-[{% avatar Sigggma %}](https://github.com/Sigggma/)
-[{% avatar matisuno %}](https://github.com/matiasuno/)
-[{% avatar diegoteran99 %}](https://github.com/diegoteran99/)
+[{% avatar bulla %}](https://github.com/antoniochavez18/)
+[{% avatar diego %}](https://github.com/diegoteran99/)
+[{% avatar esteban %}](https://github.com/Sigggma/)
+[{% avatar felipeUlloa %}](https://github.com/fulloaf/)
+[{% avatar fire2a %}](https://github.com/fire2a/)
+[{% avatar lucas %}](https://github.com/lucasmurray97/)
+[{% avatar ramiro %}](https://github.com/R4miro-P/)
+[{% avatar sebastian %}](https://github.com/sebarojasmorales/)
 
 ![ci](https://github.com/fire2a/docs/actions/workflows/ci.yml/badge.svg)
 ![pages](https://github.com/fire2a/docs/actions/workflows/pages.yml/badge.svg)
