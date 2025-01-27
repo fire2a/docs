@@ -10,7 +10,7 @@ Cell2FireW simulator
 </h1>
 
 {: .warning}
-CLI C++ code; Check the graphical user friendly version: [Fire Analytics Toolbox QGIS plugin](../qgis-toolbox)
+CLI C++ code; Check the graphical user friendly version: [Fire Analytics Toolbox QGIS plugin]({{ site.baseurl }}/qgis-toolbox)
 
 {: .no_toc}
 <details closed markdown="block">
