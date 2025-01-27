@@ -37,7 +37,7 @@ Clearly delimites: inputs, outputs, algorithms and contexts; achieving seamless 
 5. **Python script**, working *both* [calling it] from the QGIS [python console] *or* as [standalone code]
 
 # Installing
-[Full guide here](/qgis-management) or overview (with video):
+[Full guide here]({{ site.baseurl }}/qgis-management) or overview (with video):
 1. Install [QGIS] latest version 
    - Support >= 3.36.2 
 
@@ -144,6 +144,10 @@ Note: Step 2 can be skipped but it is cumbersome to select each layer from file 
 
 {: .warning}
 By default QGIS limits the processing algorithms log to about 5000 lines. In the rare case you really need the full log, see number 4 and 5 of [usage alternatives](https://fire2a.github.io/docs/qgis-toolbox/index.html#usage-alternatives)
+
+| <img src="./img/current_tools.png" alt="cannot load image"> |
+| :--- |
+| QGIS processing tools snapshot |
 
 ---
 [QGIS]: https://qgis.org
