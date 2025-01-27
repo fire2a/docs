@@ -5,10 +5,12 @@ nav_order: 2
 has_children: true
 has_toc: false
 ---
-# Cell2FireW simulator
+<h1>
+Cell2FireW simulator
+</h1>
 
 {: .warning}
-CLI C++ code; Check the graphical user friendly version: [Fire Analytics Toolbox QGIS plugin](qgis-toolbox)
+CLI C++ code; Check the graphical user friendly version: [Fire Analytics Toolbox QGIS plugin](/qgis-toolbox)
 
 {: .no_toc}
 <details closed markdown="block">
@@ -19,6 +21,8 @@ CLI C++ code; Check the graphical user friendly version: [Fire Analytics Toolbox
 1. TOC
 {:toc}
 </details>
+
+# Overview
 
 _Originally forked from [Cell2Fire](https://github.com/cell2fire/Cell2Fire), thanks to the work of Cristobal Pais, Jaime Carrasco, David Martell, [David L. Woodruff](https://github.com/DLWoodruff), Andres Weintraub, et al._
 
@@ -53,7 +57,7 @@ Released flavors (*no longer maintained*):
 
 # Get Cell2FireW
 ## gui
-Most users would want to get the graphical user friendly version: [Fire Analytics Toolbox QGIS plugin](qgis-toolbox)
+Most users would want to get the graphical user friendly version: [Fire Analytics Toolbox QGIS plugin](/qgis-toolbox)
 ## cli
 Get a ready to use binary (choose your platform), from the [latest release](https://www.github.com/fire2a/C2F-W/releases/latest) page.
 ## source
