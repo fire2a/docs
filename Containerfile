@@ -19,4 +19,4 @@ RUN chmod +x /build_n_serve.sh
 
 EXPOSE 4000 35729
 
-ENTRYPOINT ["/build_n_serve.sh"]
+CMD ["/build_n_serve.sh"]

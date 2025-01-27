@@ -2,7 +2,7 @@
 set -x
 
 cd /app
-git clean -dfX
+# git clean -dfX # messes unchanged files
 rm -f Gemfile.lock
 rm -fr .bundle vendor/bundle
 bundle clean --force
