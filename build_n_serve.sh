@@ -1,6 +1,7 @@
 #!/bin/bash
 set -x
 
+cd /app
 git clean -dfX
 rm -f Gemfile.lock
 rm -fr .bundle vendor/bundle

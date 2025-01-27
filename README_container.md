@@ -6,10 +6,11 @@ _Almost a bug: the container does not signal the browser to reload the page afte
 
 ```bash
 apt install podman
-podman build -t fire2a_docs2 .
-podman run -it --rm -v $(pwd):/app -p 35729:35729 -p 4000:4000 fire2a_docs /app/rebuild_serve.sh
-# or
-podman run -it --rm -v $(pwd):/app -p 35729:35729 -p 4000:4000 fire2a_docs /app/serve.sh
+podman build -t fire2a_docs .
+# check build_n_serve.sh the default command
+podman run -it --rm -v ./site:/app -p 35729:35729 -p 4000:4000 fire2a_docs
+# or just serve
+podman run -it --rm -v $(pwd):/app -p 35729:35729 -p 4000:4000 fire2a_docs /serve.sh
 ```
 
 
