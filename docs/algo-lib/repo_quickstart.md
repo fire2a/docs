@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Installation & Quickstart
-nav_order: 2
+nav_order: 1
 has_toc: false
 parent: Algorithms Library
 ---

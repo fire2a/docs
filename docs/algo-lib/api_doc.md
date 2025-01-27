@@ -1,7 +1,7 @@
 ---
 layout: default
 title: API Documentation
-nav_order: 1
+nav_order: 2
 has_toc: false
 parent: Algorithms Library
 ---
