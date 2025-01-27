@@ -11,6 +11,12 @@ RUN apt-get update && \
     git \
     vim-tiny
 
+COPY serve.sh /serve.sh
+RUN chmod +x /serve.sh
+
+COPY build_n_serve.sh /build_n_serve.sh
+RUN chmod +x /build_n_serve.sh
+
 EXPOSE 4000 35729
 
-ENTRYPOINT ["/bin/bash"]
+CMD ["/build_n_serve.sh"]
