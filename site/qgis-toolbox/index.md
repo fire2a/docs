@@ -37,7 +37,7 @@ Clearly delimites: inputs, outputs, algorithms and contexts; achieving seamless 
 5. **Python script**, working *both* [calling it] from the QGIS [python console] *or* as [standalone code]
 
 # Installing
-[Full guide here](qgis-cookbook) or overview (with video):
+[Full guide here](/qgis-management) or overview (with video):
 1. Install [QGIS] latest version 
    - Support >= 3.36.2 
 

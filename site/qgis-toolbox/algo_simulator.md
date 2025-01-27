@@ -1,6 +1,6 @@
 ---
 layout: default
-title: (Cell2)Fire simulator
+title: C2FW Fire Simulator
 nav_order: 1
 has_children: false
 has_toc : false
@@ -16,45 +16,6 @@ parent: QGIS Fire Analytics Toolbox
 1. TOC
 {:toc}
 </details>
-# Data preparation
-## Rasters
-* Prepared instances available with "instance downloader" algorithm
-* All rasters (and project) must be projected in the same CRS, in squared meters
-* Using the fuel raster as base, rasters must match:
-    - In number of pixels in both direction
-    - At most one pixel offset in each direction
-    - Hence pixel size must be very close [~mm]
-
-| rasters | purpose | units |
-| --- | --- | --- |
-| fuels | encode landscape | fuel model table |
-| elevation | dem | meters |
-| cbh | canopy base height is where the lowest branch is | meters |
-| cbd | canopy bulk density | kg/m3 |
-| ccf | canopy cover fraction is like cloud cover indicator | [0,1] |
-| py | probability density map is to draw ignitions | [0,1] |
-
-## Weather
-**Weather.csv table specification:**
-* minimal columns: `name,timestamp,wind-speed,wind-direction`
-* rows: by default each row lasts one hour
-* fuel model dependant columns:
-
-Canada
-: `Scenario,datetime,APCP,TMP,RH,WS,WD,FFMC,DMC,DC,ISI,BUI,FWI`  
-
-Kitral
-: `Instance,datetime,WS,WD,TMP,RH`  
-
-Scott&Burgan
-: `Scenario,datetime,WS,WD,FireScenario`  
-
-* FireScenario was deprecated by "Live & Dead Fuel Moisture Content Scenario [1=dry..4=moist]"
-* There's no need to be consistent with the timestamps, but isoformat `YYYY-MM-DDTHH:MM:SS` should be followed
-* WIP: unifying weather formats, relying on column names instead of order to read them
-
-<a href="#top">back to top</a>
-{: style="text-align: right;"}
 
 # Filling the dialog
 The simulator dialog is divided in four main sections: *Landscape, ignitions, weather and outputs*. And two optional: run-configuration and advanced options.
