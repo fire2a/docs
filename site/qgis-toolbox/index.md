@@ -37,10 +37,9 @@ Clearly delimites: inputs, outputs, algorithms and contexts; achieving seamless 
 5. **Python script**, working *both* [calling it] from the QGIS [python console] *or* as [standalone code]
 
 # Installing
-[Full guide here](/docs/docs/qgis-cookbook/README.html) or overview (with video):
+[Full guide here](qgis-cookbook) or overview (with video):
 1. Install [QGIS] latest version 
-   - Support >= 3.36.1 
-   - CPLEX Solver in Windows? Stick to 3.36.1 version, read [this now](/docs/docs/qgis-cookbook/README.html#setup-cplex-solver)
+   - Support >= 3.36.2 
 
 1. Add fire2a's [plugin store URL][toolbox-server] as a custom plugin source
    - `QGIS menu > Plugins > Manage and Install Plugins > Settings > Add > paste the URL > Ok`
@@ -50,7 +49,7 @@ Clearly delimites: inputs, outputs, algorithms and contexts; achieving seamless 
 
 1. Accept on the dialog asking permission to install the plugin's python dependencies (if needed)
    - _Save any open work before installing/updating the plugin. Installing & reloading dependencies on the fly_ __could crash QGIS__
-   - You can deny and disable this check, that happens every time the plugin is loaded. ([Manually][fire2a-lib-pypi] install [them](https://github.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/blob/b7af87e35a021005a3d55f7d0d802431296ef196/fireanalyticstoolbox/dependencies_handler.txt#L2))
+   - You can deny and disable this check, that happens every time the plugin is loaded. ([Manually][fire2a-lib-pypi] install [them](https://github.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/blob/main/fireanalyticstoolbox/dependencies_handler.txt))
    - Restart QGIS if any install or reloading doesn't succeed (details at: Log Messages > Plugins)
    - Toggle the plugin checkbox (left of <img src="https://raw.githubusercontent.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/main/fireanalyticstoolbox/assets/forestfire.svg" style="height: 16px"> its icon on the Manager list) if it doesn't appear immediately on the Processing Toolbox Panel
 
@@ -144,7 +143,7 @@ Note: Step 2 can be skipped but it is cumbersome to select each layer from file 
 : Raster treatment & teams optimization : Maximize the changed value of the treated raster, deciding which treatment to apply by which team to each pixel (or no change), subject to budget, area constraints and team capabilities
 
 {: .warning}
-By default QGIS limits the processing algorithms log to about 5000 lines. In the rare case you really need the full log, see number 4 and 5 of [usage alternatives](https://fire2a.github.io/docs/docs/qgis-toolbox/README.html#usage-alternatives)
+By default QGIS limits the processing algorithms log to about 5000 lines. In the rare case you really need the full log, see number 4 and 5 of [usage alternatives](https://fire2a.github.io/docs/qgis-toolbox/index.html#usage-alternatives)
 
 ---
 [QGIS]: https://qgis.org

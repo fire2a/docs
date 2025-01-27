@@ -5,7 +5,7 @@ nav_order: 5
 has_children: true
 has_toc: false
 ---
-## [Install & Setup](./install.html)
+## [Install & Setup guide](./install.html)
 __tl;dr:__ 
 - prefer the latest over the LTR (long term release) of QGIS 
 - __Linux__: setup an system aware python virtual environment for QGIS
@@ -15,7 +15,7 @@ __tl;dr:__
     - make your python environment writable 
     - use the bundled python directly
 
-## [Plugins](./plugins.html)
+## [Plugins guide](./plugins.html)
 __tl;dr:__ 
 - There are store plugins, custom store plugins, zip releases and manual installations
 - Must have plugins: Save All, Serval, IPyConsole, Plugin Reloader, Plugin Builder

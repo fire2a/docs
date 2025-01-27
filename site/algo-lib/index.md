@@ -15,6 +15,9 @@ The target users are developers and researchers who want to reuse these algorith
 * [Installation & Quickstart](https://github.com/fire2a/fire2a-lib/blob/main/README.md)
 * [API Documentation]
 
+{: .info}
+Everything Everywhere All at Once [https://github.com/fire2a#developer-setup](https://github.com/fire2a#developer-setup)
+
 ---
 [python package]: https://pypi.org/project/fire2a-lib
 [QGIS Fire Analytics Toolbox]: /docs/qgis-toolbox/

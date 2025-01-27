@@ -4,17 +4,17 @@ layout: home
 ---
 Welcome to Fire2a's research group user documentation, choose your component:
 
-[__QGIS Fire Analytics Toolbox__](docs/qgis-toolbox/README.html): Our research as **user friendly graphical tools**: Simulate wildfires, get risk metrics, optimize firebreak location, etc. All from within [QGIS]. **Simple as filling a form**. Also available: drag'n'drop boxes (algorithms) into a *GIS-data-science-pipeline*.
+[__QGIS Fire Analytics Toolbox__](qgis-toolbox): Our research as **user friendly graphical tools**: Simulate wildfires, get risk metrics, optimize firebreak location, etc. All from within [QGIS]. **Simple as filling a form**. Also available: drag'n'drop boxes (algorithms) into a *GIS-data-science-pipeline*.
 
-[__Cell2FireW__](docs/Cell2Fire/README.html): Forest fire simulator ([Forked]) and improved ([Here]). Supports Canada, Kitral, S&B fuel models , surface and crown fire, deals with weather scenarios, surface and vegetation moisture content; various output metrics. Also enhances in memory management, platform support, etc. **C++ only command line interface.**
+[__Cell2FireW__](Cell2FireW): Forest fire simulator ([Forked]) and improved ([Here]). Supports Canada, Kitral, S&B fuel models , surface and crown fire, deals with weather scenarios, surface and vegetation moisture content; various output metrics. Also enhances in memory management, platform support, etc. **C++ only command line interface.**
 
-[__Algorithms Library__](docs/fire2a-lib.html) of common tasks & patterns of GIS. Also showcasing proof of concepts and special algorithms developed such as landscape clustering, firebreak optimization allocation, downstream protection value, etc. **A python package.**
+[__Algorithms Library__](algo-lib) of common tasks & patterns of GIS. Also showcasing proof of concepts and special algorithms developed such as landscape clustering, firebreak optimization allocation, downstream protection value, etc. **A python package.**
 
-[__QGIS cookbook__](docs/qgis-cookbook/README.html): Install & setup guides, python environments, plugins and workflows examples.
+[__QGIS cookbook__](qgis-cookbook): Install & setup guides, python environments, plugins and workflows examples.
 
-[__QGIS management__](docs/qgis-cookbook/README.html): Install & setup guides, python environments, plugins and workflows examples.
+[__QGIS management__](qgis-management): Install & setup guides, python environments, plugins and workflows examples.
 
-[__Getting help__](docs/getting-help/index.html): How to reach us, before getting help checklist, help message indispensables.
+[__Getting help__](getting-help): How to reach us, before getting help checklist, help message indispensables.
 
 
 # About us
@@ -27,7 +27,7 @@ Contact us at <a href="mailto:fire2a@fire2a.com">fire2a@fire2a.com</a>.
 
 Visit our public <a href="http://www.fire2a.com">webpage</a>.
 
-[![](docs/assets/aw.png){: width="40" }](https://www.dii.uchile.cl/~aweintra/)
+[![](assets/aw.png){: width="40" }](https://www.dii.uchile.cl/~aweintra/)
 [{% avatar caro %}](https://github.com/car0espinoza/)
 [{% avatar fdobad %}](https://github.com/fdobad/)
 [{% avatar felipe %}](https://github.com/FelipedlB/)
@@ -49,9 +49,9 @@ Visit our public <a href="http://www.fire2a.com">webpage</a>.
 ![pages](https://github.com/fire2a/docs/actions/workflows/pages.yml/badge.svg)
 
 ### _About this page_  
-It's all [markdown!](docs/markdown_kitchen_sink.html)  
-[content licence](https://raw.githubusercontent.com/fire2a/docs/main/LICENSE)  
-[just-the-docs-licence](https://raw.githubusercontent.com/fire2a/docs/main/just-the-docs-LICENSE)
+It's all [markdown!](markdown_kitchen_sink.html)  
+[content license](https://github.com/fire2a/docs/raw/refs/heads/main/LICENSE)  
+[just-the-docs-licence](https://github.com/just-the-docs/just-the-docs-template/raw/refs/heads/main/LICENSE)
 
 ---
 [QGIS]: https://qgis.org
