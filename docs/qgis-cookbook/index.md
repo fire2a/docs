@@ -1,6 +1,6 @@
 ---
 layout: default
-title: QGIS cookbook
+title: QGIS Cookbook
 nav_order: 4
 has toc: false
 ---
@@ -15,18 +15,20 @@ has toc: false
 </details>
 
 # Check a fire2a algorithm's html log from WSL
+_Did you accidentally close the algorithm's dialog window, and at reopening the execution log is gone? We got you covered:_
 - [Open the log messages panel](https://docs.qgis.org/latest/en/docs/user_manual/introduction/general_tools.html#log-messages-panel)
 - Look for the `fire2a` tab
 - Each algorithm execution is timestamped, identified by its name and the location of its log file, copy the location of the log file
 - Open a terminal and navigate to the log file location
-- Start a python server to visualize the html log file back in windows
+- Start a python [http server](https://docs.python.org/3/library/http.server.html) to visualize the html log file back in windows
 ```bash
 cd /tmp/processing_vYybGp/8a8bd04a438641cf8a780de0dbe7eea6/InstanceDirectory/results
 python3 -m http.server
     Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
     127.0.0.1 - - [24/Jan/2025 22:48:48] "GET / HTTP/1.1" 200 -
+# stop the server with Ctrl+C or closing the terminal
 ```
-Open your favorite web-browser (firefox) and open `http://localhost:8000/
+- Back on Windows, open your favorite web-browser (firefox) and open [http://localhost:8000/](http://localhost:8000/)
 
 ---
 [QGIS]: https://qgis.org

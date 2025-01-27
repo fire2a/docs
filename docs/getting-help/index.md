@@ -8,7 +8,7 @@ has_toc: false
 # Getting Help 🚑
 ## How to reach us
 
-1. Public relations  <a href="mailto: fire2a@fire2a.com">mail</a> (ask to join our mailing list!).
+1. Public relations  <a href="mailto: fire2a@fire2a.com">mail</a> (ask to join our mailing list!) or [linkedin](https://www.linkedin.com/company/fire2a).
 2. Chat with us at [discord](https://discord.gg/wSuSFjrt).
 3. Post a Github Issue
 
@@ -19,7 +19,7 @@ has_toc: false
    - Create `C:\local` or `~/local` folder for your work.
 2. Avoid funny characters (` `,`á`,`é`,`í`,`ö`, etc.) in directories, files and names.
 3. Avoid funny formats for rasters and vectors
-   - `Options > Processing > default raster & vector layers` set to `tif & gpkg` respectively
+   - `Options > Processing > default raster & vector layers` formats set to `tif & gpkg` respectively
    - Save all input and output layers in these formats.
 4. Update or reinstall -if apply:
    - Cell2FireW release
