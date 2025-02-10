@@ -1,13 +1,13 @@
 version: 2
 updates:
-  - package-ecosystem: bundler
-    directory: /site
+  - package-ecosystem: "bundler"
+    directory: "/site"
     schedule:
-      interval: weekly
+      interval: "weekly"
     allow:
-      - dependency-type: direct
+      - dependency-type: "direct"
 
-  - package-ecosystem: github-actions
-    directory: /.github
+  - package-ecosystem: "github-actions"
+    directory: "/"
     schedule:
-      interval: weekly
+      interval: "weekly"
