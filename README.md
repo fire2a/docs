@@ -33,7 +33,7 @@ sudo apt-get install ruby-full ruby-bundler jekyll build-essential
 ```
 #### build
 ```
-cd <repo/root>
+cd <repo/root>/site
 bundle config set --local path 'vendor/bundle'
 bundle install
 ```
