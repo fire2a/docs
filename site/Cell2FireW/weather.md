@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Weather model
+title: Wind direction
 parent: Cell2FireW simulator
 nav_order: 2
 has_children: false
