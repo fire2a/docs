@@ -56,6 +56,7 @@ ruby -v
 node -v
 # clean
 git clean -dfX -n
+git clean -dfX
 rm Gemfile.lock
 rm -r .bundle vendor/bundle
 bundle clean --force
