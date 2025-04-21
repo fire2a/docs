@@ -96,12 +96,15 @@ This section has three main parts: options, advanced and destination directories
 {: style="text-align: right;"}
 
 ### Advanced options
-* <details><summary>Un/Fold the block using the triangle</summary> at the left of Advanced Parameters</details> 
+- <details><summary>Un/Fold the block using the triangle</summary> at the left of Advanced Parameters</details> 
 ![Advanced](img/algo_sim-advanced.png){: width="85%"}
-* Any~~thing~~ **command line parameters can be appended**, refer to [Cell2Fire.ReadArgs.cpp](https://github.com/fire2a/C2F-W/blob/main/Cell2FireC/ReadArgs.cpp#L40), and [cell2fire.py.ParseArgs](https://github.com/fire2a/C2F-W/blob/main/Cell2FireC/cell2fire.py#L19) for documentation
-* Dry run is useful for building the instance folder and getting the full command line that would be executed, as a way to **verify or modify the instance before running**
-    1. Windows users must open OSGeo4W shell before running cell2fire.py
-    2. Change directory to `path` before running the command
+- Any~~thing~~ **command line parameters can be appended**, refer to: [Technical documentation](https://fire2a.github.io/C2F-W/), the code [Cell2Fire.ReadArgs.cpp](https://github.com/fire2a/C2F-W/blob/main/Cell2Fire/ReadArgs.cpp#L40) or this [pull request](https://github.com/fire2a/C2F-W/pull/57/files#diff-4777f9534ffbf4d4dae798e9ad831b72a7c8bd25b6da4d3676df135518c7bbb6) for documentation
+- **Dry run** prepares the instance and the command line leaving the execution up to the user. Is a way to *gain resources* (close QGIS, open a terminal), *verify or modify the instance before running*
+
+<video controls loop style="width: 100%;">
+  <source src="./img/algo_sim-dry-run.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 <a href="#top">back to top</a>
 {: style="text-align: right;"}
