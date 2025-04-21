@@ -66,7 +66,8 @@ Clearly delimites: inputs, outputs, algorithms and contexts; achieving seamless 
 2. Save an empty [project] into the downloaded folder (where fuels, elevation and Weather.csv files are)
 3. Drag and drop layers from the project home (file Browser Panel) into the Layer Panel
 4. Set the same CRS to the layers and project (any in meters suffices)
-5. Open the simulator algorithm <img src="./img/forestfire.svg"  style="height: 16px">, select the proper fuelmodel (Canada, Kitral or S&B), select the fuel layer in the fuel dropdown, press run. If the weather file is not loaded automatically, you have not save the project properly. In that case, you can repeat from step 2 or load the weather file manually.   
+5. Open the simulator algorithm <img src="./img/forestfire.svg"  style="height: 16px">, select the proper fuelmodel (Canada, Kitral or S&B), select the fuel layer in the fuel dropdown, press run.   
+   _(If the weather file is not loaded automatically, you have not save the project properly. In that case, you can repeat from step 2 or load the weather file manually.)_
 
 <a name="anchor"> </a>
 <video controls loop style="width: 100%;">
