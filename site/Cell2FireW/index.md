@@ -57,7 +57,7 @@ Released flavors (*no longer maintained*):
 
 # Get Cell2FireW
 ## gui
-Most users would want to get the graphical user friendly version: [Fire Analytics Toolbox QGIS plugin](https://fire2a.github.io/docs/qgis-toolbox/)
+Most users would want to get the graphical user friendly version: [Fire Analytics Toolbox QGIS plugin]({{ site.baseurl }}/qgis-toolbox)
 ## cli
 Get a ready to use binary (choose your platform), from the [latest release](https://www.github.com/fire2a/C2F-W/releases/latest) page.
 ## source
