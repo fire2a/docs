@@ -33,7 +33,7 @@ sudo apt-get install ruby-full ruby-bundler jekyll build-essential
 ```
 #### build
 ```
-cd <repo/root>
+cd <repo/root>/site
 bundle config set --local path 'vendor/bundle'
 bundle install
 ```
@@ -56,6 +56,7 @@ ruby -v
 node -v
 # clean
 git clean -dfX -n
+git clean -dfX
 rm Gemfile.lock
 rm -r .bundle vendor/bundle
 bundle clean --force
