@@ -6,6 +6,13 @@ layout: default
 ---
 # Markdown kitchen sink
 
+## video test
+
+<video controls loop style="width: 95%;">
+  <source src="test.webm" type="video/webm">
+  Your browser does not support the video tag.
+</video>
+
 ## references
 <https://www.hansenh.com/post/jekyll-formatting-cheatsheet>
 <https://cloudcannon.com/cheat-sheets/jekyll/>
