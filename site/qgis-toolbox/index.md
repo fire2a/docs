@@ -135,6 +135,9 @@ Note: Step 2 can be skipped but it is cumbersome to select each layer from file 
 : Polygon knapsack optimization : Optimizes the classical knapsack problem using polygons with values and/or weights attributes, returns a polygon layer with the selected polygons.
 
 <img src="https://raw.githubusercontent.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/main/fireanalyticstoolbox/assets/firebreakmap.svg"  alt='icon-missing' style="height: 16px">
+: [Raster knapsack with Protected Areas](./algo_pa_knapsack.html) : Specify protected areas that, even though valuable, treating them is unfeasible; the algorithms selects around them
+
+<img src="https://raw.githubusercontent.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/main/fireanalyticstoolbox/assets/firebreakmap.svg"  alt='icon-missing' style="height: 16px">
 : Polygon treatment optimization : Using possible treatments for each polygon, Maximize the changed value of the treated polygons
 
 <img src="https://raw.githubusercontent.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/main/fireanalyticstoolbox/assets/firebreakmap.svg"  alt='icon-missing' style="height: 16px">
