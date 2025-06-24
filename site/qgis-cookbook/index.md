@@ -30,6 +30,34 @@ python3 -m http.server
 ```
 - Back on Windows, open your favorite web-browser (firefox) and open [http://localhost:8000/](http://localhost:8000/)
 
+# Animate a vector layer to record a fire spread video
+1. Simulate a fire with propagation scars and/or propagation digraph
+2. Create a datetime (or date if datetime not available) type field in the vector layer attribute table
+3. Fill the field with a formula similar to:
+
+    ```
+    now() + make_interval(minutes:=time)
+    now() + make_interval(days:=time) 
+    ```
+4. Open the "Temporal" setting of the layer to use this field as the temporal field
+5. Open the "Time Manager" feature in QGIS
+
+<video controls loop style="width: 33%;">
+  <source src="./img/animate_fire.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+| Detailed Examples |
+|:---:|
+| Additional layer styling: make the polygons semi transparent and add borders |
+| ![styling](./img/styling_propagation_scars.png) |
+| example of attribute table with datetime field |
+| ![attribute table](./img/styling_propagation_scars_animation2.png) |
+| example layer temporal controller |
+| ![temporal controller](./img/styling_propagation_scars_animation.png) |
+| example QGIS animation controller |
+| ![animation controller](./img/styling_propagation_scars_animation3.png) |
+
 ---
 [QGIS]: https://qgis.org
 [requirements.txt]: https://raw.githubusercontent.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/main/fireanalyticstoolbox/requirements.txt 
