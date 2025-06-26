@@ -18,7 +18,7 @@ has_toc: false
    - Use QGIS temporary outputs.
    - Create `C:\local` or `~/local` folder for your work.
 2. Avoid funny characters (` `,`á`,`é`,`í`,`ö`, etc.) in directories, files and names.
-   - Using QGIS in the default English language is strongly suggested, ![change it!]({{ site.baseurl }}/qgis-cookbook/#override-qgis-language)
+   - Using QGIS in the default English language is strongly suggested, <a href="{{ site.baseurl }}/qgis-cookbook/#override-qgis-language">change it!</a>
 3. Avoid funny formats for rasters and vectors
    - `Options > Processing > default raster & vector layers` formats set to `tif & gpkg` respectively
    - Save all input and output layers in these formats.
