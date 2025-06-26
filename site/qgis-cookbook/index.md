@@ -58,6 +58,12 @@ python3 -m http.server
 | example QGIS animation controller |
 | ![animation controller](./img/styling_propagation_scars_animation3.png) |
 
+# Override QGIS language
+Sometimes weird things happen because translations are not fully compatible (for example non-posix characters like " ",á,é,ñ,ö,etc.). We recommend installing the default English QGIS, else you can override the locale like this:
+- From qgis menu, click Settings > Options > General > Override System Locale & User interface translation : Make sure is "American English"
+
+![override translation screenshot](./img/override_translation_screenshot.png)
+
 ---
 [QGIS]: https://qgis.org
 [requirements.txt]: https://raw.githubusercontent.com/fire2a/fire-analytics-qgis-processing-toolbox-plugin/main/fireanalyticstoolbox/requirements.txt 
