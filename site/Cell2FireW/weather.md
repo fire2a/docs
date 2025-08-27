@@ -8,21 +8,21 @@ has_toc: false
 ---
 
 # Wind direction 
+How wind direction should be indicated in weather files depends of which version of the simulator or QGIS plugin you use.
 
-Wind direction is generally indicated by the direction from which the wind originates. For example, a north or northerly wind blows from the north to the south.
+## Wind direction in Cell2FireW version 1.0.0 or greater
 
-## Wind direction in meteorology
+Following the meteorological standard, wind direction is indicated by the direction from which the wind originates. For example, a north or northerly wind blows from the north to the south. The wind direction is measured in degrees, from 0º to 360º, rotating clockwise in the horizontal plane. 
 
-It is measured in degrees, from 0º to 360º, rotating clockwise in the horizontal plane. 
-
-* Values close to 1º and 360º indicate north wind
+* Values close to 0º and 360º indicate north wind
 * 90º indicate east wind
 * 180º south wind
 * 270º west wind.
 
-## Wind direction Cell2Fire
+## Wind direction in Cell2FireW versions prior to 1.0.0
 
-In Cell2Fire, the wind is also measured in degrees from 0° to 360°, rotating clockwise in the horizontal plane.
+In previous versios of Cell2FireW, the wind direction was dictated by the direction towards which the wind is blowing.
+It is also measured in degrees from 0° to 360°, rotating clockwise in the horizontal plane, but 0° means "South".
 
 * Values close to 0° or 360° indicate south wind
 * 90° indicate west wind
