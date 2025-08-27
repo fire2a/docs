@@ -12,26 +12,28 @@ How wind direction should be indicated in weather files depends of which version
 
 ## Wind direction in Cell2FireW version 1.0.0 or greater
 
-Following the meteorological standard, wind direction is indicated by the direction from which the wind originates. For example, a north or northerly wind blows from the north to the south. The wind direction is measured in degrees, from 0º to 360º, rotating clockwise in the horizontal plane. 
+Following the <b>meteorological standard, wind direction is indicated by the direction from which the wind originates</b>. For example, a north or northerly wind blows from the north to the south. The wind direction is measured in degrees, from 0º to 360º, rotating clockwise in the horizontal plane. 
 
-* Values close to 0º and 360º indicate north wind
-* 90º indicate east wind
-* 180º south wind
-* 270º west wind.
+<div style="text-align: justify;">
+  <table>
+    <tr>
+      <td style="text-align: center;"><img src="img/meteo_angulos.png" alt="meteo" width="50%"></td>
+      <td style="text-align: center;"><br>Values close to 0º and 360º indicate north wind<br>90º indicate east wind<br>180º south wind<br>270º west wind.</td>
+    </tr>
+    </table>
+</div>
 
 ## Wind direction in Cell2FireW versions prior to 1.0.0
 
-In previous versios of Cell2FireW, the wind direction was dictated by the direction towards which the wind is blowing.
+In previous versions of Cell2FireW, the wind direction was dictated by the direction <b>towards</b> which the wind is blowing.
 It is also measured in degrees from 0° to 360°, rotating clockwise in the horizontal plane, but 0° means "South".
 
-* Values close to 0° or 360° indicate south wind
-* 90° indicate west wind
-* 180° north wind
-* 270° east wind 
-
-
-| Metereological | Cell2FireW | 
-| --- | --- |
-| ![meteo](img/meteo_angulos.png)| ![angulos](img/Cell2Fire_angulos.png)  |
-
+<div style="text-align: justify;">
+  <table>
+    <tr>
+      <td style="text-align: center;"><img src="img/Cell2Fire_angulos.png" alt="meteo" width="50%"></td>
+      <td style="text-align: center;"><br>Values close to 0º and 360º indicate south wind<br>90º indicate west wind<br>180º north wind<br>270º east wind.</td>
+    </tr>
+    </table>
+</div>
 

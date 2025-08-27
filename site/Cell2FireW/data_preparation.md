@@ -67,7 +67,7 @@ Scott&Burgan
 * FireScenario was deprecated by "Live & Dead Fuel Moisture Content Scenario [1=dry..4=moist]"
 * There's no need to be consistent with the timestamps, but isoformat `YYYY-MM-DDTHH:MM:SS` should be followed
 * WIP: unifying weather formats, relying on column names instead of order to read them
-* Cell2Fire wind angle is reversed from normal metereological data, check [wind direction](weather) for more details.
+* Cell2Fire wind angle follows metereological convention, check [wind direction](weather) for more details.
 
 <a href="#top">back to top</a>
 {: style="text-align: right;"}
