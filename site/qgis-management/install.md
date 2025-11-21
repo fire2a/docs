@@ -33,11 +33,12 @@ At the time of writing we support 3.36.2 and up.
 - Official QGIS [install tutorial](https://qgis.org/download/)
 - Make a system aware python virtual environment for QGIS:
     ```bash
-    # required
+    # required to create venvs
     sudo apt install python3-venv
 
-    # ~/pyvenv/qgis is just an example
     python3 -m venv --system-site-packages ~/pyvenv/qgis
+    # ~/pyvenv/qgis is just an example, used from now onwards
+    # the --system-site-packages flag allows the usage of GDAL, PyQt5, SIP and other QGIS dependencies
     ```
 - Usage: activate before launching qgis
     ```bash
@@ -52,8 +53,8 @@ At the time of writing we support 3.36.2 and up.
 
     # edit the sections in
     nano ~/.local/share/applications/org.qgis.qgisvenv.desktop
-    # rename the launcher 
-        Name=QGIS Desktop (venv)
+    # rename the launcher (as you wish)
+        Name=fire2a QGIS Desktop
 
     # activate the python environment 
         Exec=bash -c 'source ~/pyvenv/qgis/bin/activate && qgis %F'
@@ -88,41 +89,67 @@ Some algorithms (DPV) don't parallelize in Windows; the standalone installer doe
 Official [guide](https://learn.microsoft.com/en-us/windows/wsl/tutorials/gui-apps), nevertheless here are the main steps for setting up Debian with QGIS:
 - Prerequisites: Windows 10 Build 19044+ or Windows 11 (for WSL2 with GUI)
 
-1. Virtualization must be enabled (usually is, but restart to bios or uefi setup and check, else the next step will fail)
+1. Virtualization must be enabled (usually is, but restart to bios or uefi to setup and check, else the next step will fail)
 2. Activate the Windows Subsystem for Linux (WSL) additional feature (Start > Search > `Turn Windows features on or off` > checkbox `Windows Subsystem for Linux`, needs restarting)
-3. Install Debian Linux distribution from the Microsoft Store or type in PowerShell
+3. On the WSL Settings App, make sure `gui apps` is enabled and, if needed, set maximum shared space less than the 1TB default
+
+    | <img src="img/wsl_settings_about.png"  alt='wsl settings about' style="width: 60%"> | 
+    | <img src="img/wsl_settings_gui.png"  alt='wsl settings gui' style="width: 60%"> | 
+    | <img src="img/wsl_settings_fs_size.png"  alt='wsl settings filesystem size' style="width: 60%"> | 
+
+4. Install Debian (more reliable than Ubuntu) Linux distribution from the Microsoft Store or type in PowerShell
     ```powershell
     wsl --install -d Debian
     ```
-4. Install the graphic drivers for gui apps (Open Debian from the Start menu)
+5. Install the graphic drivers for gui apps (Open Debian from the Start menu) Also there's an Ubuntu variant, read below!
     ```bash
-    # update and upgrade the system (tip: repeat monthly)
+    # Update and upgrade the system (tip: repeat monthly)
     sudo apt update && sudo apt upgrade -y
 
-    # install the graphic drivers by allowing firmware packages
-    sudo nano /etc/apt/sources.list
+    # Install the graphic drivers by allowing all firmware packages, editing the sources file:
+    sudo nano /etc/apt/sources.list.d/debian.sources
 
-    # add contrib, non-free and non-free-firmware to the end of the lines (3 or 4 lines), like this:
-        deb http://deb.debian.org/debian bookworm main contrib non-free non-free-firmware
+    # Add 'contrib', 'non-free' and 'non-free-firmware' to the 'Component' section 
+    #   of the trixie and trixie-update suites, e.g., change:
+    Types: deb
+    URIs: https://deb.debian.org/debian
+    Suites: trixie trixie-updates
+    Components: main contrib non-free non-free-firmware  # <-- ADD HERE
+    Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
 
-    # save and exit the editor: Ctrl+O, Enter, Ctrl+X
+    #   to save and exit the nano editor: Ctrl+O, Enter, Ctrl+X
 
-    # update and install the drivers
+    # Update and install the drivers
     sudo apt update && sudo apt install firmware-linux firmware-linux-nonfree -y
     sudo reboot
 
-    # test the drivers
+    # Test the drivers
     sudo apt install x11-apps
     xeyes
     ```
+5.U If using Ubuntu or older debian versions, they use the older apt sources list formats
+    ```bash
+    sudo nano /etc/apt/sources.list
+    # append at the end of the lines
 
-5. Check this [tutorial](https://learn.microsoft.com/en-us/windows/wsl/filesystems?source=recommendations), tl;dr: 
+    # for older Debian Bookworm
+    # add 'contrib', 'non-free' and 'non-free-firmware' 
+    deb http://deb.debian.org/debian bookworm main contrib non-free non-free-firmware
+
+    # for Ubuntu 
+    # add 'restricted', 'universe', 'multiverse'
+    deb http://archive.ubuntu.com/ubuntu jammy main restricted universe multiverse
+    ```
+
+6. Check this [tutorial](https://learn.microsoft.com/en-us/windows/wsl/filesystems?source=recommendations), tl;dr: 
   - _Linux programs should work over linux locations, mixing windows locations is slow_
   - linux path `/home/<user name>` is equivalent to `\\wsl$\debian\home\<user name>` in windows
   - `/mnt/c/Users/<user name>/` is equivalent to `C:\Users\<user name>\`
   - use the `explorer.exe .` command to open a file explorer in the current directory
-6. Now you can install QGIS as in the linux section
-7. Windows icon to launch QGIS: Create a batch file, e.g., `Desktop\launch_qgis.bat` with the following content:
+
+7. Now you can install QGIS as in the [linux section](./install.html#linux-)
+
+8. Windows icon to launch QGIS: Create a batch file, e.g., `Desktop\launch_qgis.bat` with the following content:
     ```batch
     @echo off
     wsl -d Debian -- bash -c "source ~/pyvenv/qgis/bin/activate && qgis"
@@ -134,7 +161,7 @@ Official [guide](https://learn.microsoft.com/en-us/windows/wsl/tutorials/gui-app
 ## OSGeo4W installer
 - Official [OSGeo4W installer](https://qgis.org/resources/installation-guide/#osgeo4w-installer) guide
 - QGIS gets installed in `C:\OSGeo4W\bin\qgis-bin.exe`
-- To use QGIS's python you must open the OSGeo4W shell and activate the environment
+- To use QGIS's python you must open the OSGeo4W shell and activate the environment, this is the wrapper:
     ```batch
     C:\OSGeo4W> cd bin
     C:\OSGeo4W\bin> python-qgis.bat
@@ -145,8 +172,8 @@ Official [guide](https://learn.microsoft.com/en-us/windows/wsl/tutorials/gui-app
 
 ## Standalone installer
 - Official QGIS [standalone](https://qgis.org/resources/installation-guide/#standalone-installers) guide
-- QGIS gets installed in `C:\Program Files\QGIS 3.40.2\bin\qgis-bin.exe`
-- To use QGIS's python you must open the OSGeo4W shell and activate the environment
+- QGIS gets installed in `C:\Program Files\QGIS 3.40.2\bin\qgis-bin.exe`. The downside is that the version varies with every update, needing full reinstallation (use OSGeo4W if you want quick auto updates and no path changes)
+- To use QGIS's python you must open the OSGeo4W shell and activate the environment, this is the wrapper:
     ```batch
     C:\Program Files\QGIS 3.40.2\> cd bin
     C:\Program Files\QGIS 3.40.2\bin\> python-qgis.bat
