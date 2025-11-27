@@ -77,13 +77,16 @@ C:\Users\<user>\AppData\Roaming\QGIS\QGIS3\profiles\default\python\plugins\firea
 : [Serval](https://plugins.qgis.org/plugins/Serval/), Modify your rasters with your mouse, as if you were using paint!
 
 <img src="https://plugins.qgis.org/media/cache/b1/4b/b14beb4a67135e9ebf4cbdfbc2a206dc.png"  alt='icon-missing' style="height: 16px">
-: [IPyConsole](https://plugins.qgis.org/plugins/IPyConsole/), "No offense, but QGIS python console just sucks." ([sic](https://www.itopen.it/qgis-and-ipython-the-definitive-interactive-console/#comment-140751)) [documentation](http://www.itopen.it/qgis-and-ipython-the-definitive-interactive-console/), [fix to use latest qtconsole](https://github.com/elpaso/qgis-ipythonconsole/compare/master...fdobad:qgis-ipythonconsole:master)
+: [IPyConsole](https://plugins.qgis.org/plugins/IPyConsole/), <em>"No offense, but QGIS python console just sucks."</em> ([sic](https://www.itopen.it/qgis-and-ipython-the-definitive-interactive-console/#comment-140751)) [documentation](http://www.itopen.it/qgis-and-ipython-the-definitive-interactive-console/), `!pip install qtconsole` is required (thanks to [this merged fix](https://github.com/elpaso/qgis-ipythonconsole/compare/master...fdobad:qgis-ipythonconsole:master))
 
 <img src="https://plugins.qgis.org/media/cache/0f/ac/0faca0282837983e3b2cad151c05844e.png"  alt='icon-missing' style="height: 16px">
 : [Plugin Reloader](https://plugins.qgis.org/plugins/plugin_reloader/), If a plugin starts misbehaving easier to reload it than to restart QGIS
 
 <img src="https://plugins.qgis.org/media/cache/e5/09/e5090f072bef93fb4344067026148210.png"  alt='icon-missing' style="height: 16px">
 : [Plugin Builder](https://plugins.qgis.org/plugins/pluginbuilder3), Jumpstart your plugin development!
+
+<img src="./img/RickAstley.gif"  alt="./img/RickAstley.png" style="height: 24px">
+: [Rick Roll](https://www.youtube.com/watch?v=dQw4w9WgXcQ) Available only if you already set up our [custom plugin repository](#install-a-custom-app-repository-official-guide)
 
 <a href="#top">back to top</a>
 {: style="text-align: right;"}
@@ -153,10 +156,20 @@ Sometimes after an update, the plugin doesn't appear on the Processing Toolbox p
 {: style="text-align: right;"}
 
 ## Conflicting plugins
-A good practice is to enable the least amount of plugins as possible, as they may conflict with each other. If you have a problem, try disabling all plugins and enabling them one by one to find the culprit.
+If you experience unexpected problems, go to `Menu>Plugins>Manage and Install Plugins>Installed` and disable all plugins, restart QGIS, then enable them one by one to find the culprit!
+
+The best practice is to enable the least amount of plugins as possible, as they may conflict with each other.
+
+## Separate QGIS profiles
+If you keep getting errors after updating or installing plugins; or have multiple sets of needed plugins, creating a new QGIS profile will improve your workflow isolating your settings and plugins!
+
+`Menu>Settings>Profiles>New Profile...` give it a name and restart QGIS!
+
+The safest bet is to keep a untranslated profile to discard translation or locale issues. After creating the profile go to `Menu>Settings>Options` and enable the `Override system locale`, setting `User interface translation` to `American English` and Locale to `English United Stats (en_US)`.
 
 ## Processing tools dissapeared
-Although it looks like a built in part of QGIS, it can be disabled. Check the `Processing` plugin in the `Plugin Manager`.
+Although it looks like a built in part of QGIS, it can be disabled.
+Check the `Processing` plugin in the `Plugin Manager`.
 
 ---
 [toolbox-server]: https://fire2a.github.io/fire-analytics-qgis-processing-toolbox-plugin/plugins.xml
