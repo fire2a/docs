@@ -23,8 +23,7 @@ podman build -t fire2a_docs .
 podman run -it --rm -v ./site:/app -p 35729:35729 -p 4000:4000 fire2a_docs
 
 # or just serve (after build)
-cd site
-podman run -it --rm -v $(pwd):/app -p 35729:35729 -p 4000:4000 fire2a_docs /serve.sh
+podman run -it --rm -v ./site:/app -p 35729:35729 -p 4000:4000 fire2a_docs /serve.sh
 ```
 
 ### Local hosting on debian
@@ -48,8 +47,12 @@ LiveReload address: http://127.0.0.1:35729
   Server running... press ctrl-c to stop.
 ```
 
-## update just-the-docs dependencies
-Dependabot will automatically create a pull request to update the just-the-docs version.
+## Mantainance
+Dependabot will automatically create a pull requests to update github actions.  
+Only the `just-the-docs` gem needs attention.
+### testing the just-the-docs dependencies update
+Although it usually works fine, sometimes there are compatibility issues with ruby or node versions.  
+Test locally and also on the Actions CI before merging.  
 ```bash
 git switch dependabot/bundler/just-the-docs-0.8.2
 # check compatibility
@@ -64,6 +67,9 @@ rm -r .bundle vendor/bundle
 bundle clean --force
 # rebuild
 ```
+Usually `Gemfile.lock` changes are only the ones proposed by dependabot, tested automatically on the CI github actions.  
+If the CI fails, adjust locally matching/changing the same configuration (ubuntu-latest, ruby version, node version) until it works.
+#### tl;dr: don't commit Gemfile.lock changes manually
 
 ## references
 https://github.com/just-the-docs/just-the-docs  
