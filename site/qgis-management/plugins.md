@@ -146,7 +146,7 @@ Start QGIS after the process ends
 Sometimes after an update, the plugin doesn't appear on the Processing Toolbox panel: Reload it by pressing on the checkbox next to its name in the `Installed` section of the `Plugin Manager` or restart QGIS.
 
 <video controls loop style="width: 95%;">
-  <source src="/docs/qgis-cookbook/img/checkbox_refresh_reloads_plugin.mp4" type="video/mp4">
+  <source src="./img/checkbox_refresh_reloads_plugin.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 <a href="#top">back to top</a>
