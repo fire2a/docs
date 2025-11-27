@@ -23,6 +23,7 @@ podman build -t fire2a_docs .
 podman run -it --rm -v ./site:/app -p 35729:35729 -p 4000:4000 fire2a_docs
 
 # or just serve (after build)
+cd site
 podman run -it --rm -v $(pwd):/app -p 35729:35729 -p 4000:4000 fire2a_docs /serve.sh
 ```
 
@@ -57,6 +58,7 @@ node -v
 # clean
 git clean -dfX -n
 git clean -dfX
+cd site
 rm Gemfile.lock
 rm -r .bundle vendor/bundle
 bundle clean --force
