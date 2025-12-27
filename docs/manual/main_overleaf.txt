@@ -1,0 +1,60 @@
+%% Overleaf			
+%% Software Manual and Technical Document Template	
+%% 									
+%% This provides an example of a software manual created in Overleaf.
+
+\documentclass{ol-softwaremanual}
+
+% Packages used in this example
+\usepackage{graphicx}  % for including images
+\usepackage{microtype} % for typographical enhancements
+\usepackage{minted}    % for code listings
+\usepackage{amsmath}   % for equations and mathematics
+\setminted{style=friendly,fontsize=\small}
+\renewcommand{\listoflistingscaption}{List of Code Listings}
+\usepackage{hyperref}  % for hyperlinks
+\usepackage[a4paper,top=4.2cm,bottom=4.2cm,left=3.5cm,right=3.5cm]{geometry} % for setting page size and margins
+\usepackage[spanish]{babel}
+
+% Custom macros used in this example document
+\newcommand{\doclink}[2]{\href{#1}{#2}\footnote{\url{#1}}}
+\newcommand{\cs}[1]{\texttt{\textbackslash #1}}
+
+% Frontmatter data; appears on title page
+\title{Manual de usuario QGIS Fire Analytics Toolbox \\}
+\version{0.2.3}
+\author{Fire Management \& Advanced Analytics Group}
+\softwarelogo{\includegraphics[width=14cm]{images/logo plugin.png}}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+\newpage
+
+\section{Introduction}
+
+El complemento de QGIS, Fire Analytics Toolbox, es una herramienta informática para la gestión y el análisis de los incendios forestales. Está diseñado para facilitar la simulación de incendios forestales, calcular métricas de riesgo y optimizar la ubicación de tratamiento de combustibles, todo directamente desde QGIS. La interfaz del plugin permite realizar estas tareas de manera intuitiva mediante formularios simples y herramientas de arrastrar y soltar. En este manual se detallan las instrucciones de instalación, configuaraciones iniciales, funciones principales, ejemplos de uso y la solución de problemas que puedan ocurrir durante la utilización de las herramientas.
+
+
+%  desarrollada por el grupo de investigación \href{https://www.fire2a.com/}{\underline{Fire2A}}
+
+\section{Instalación}
+
+\input{instalacion}
+
+\section{Resultados y algoritmos}
+\input{rya}
+
+\section{Ejemplo de Uso}
+\input{primer-uso}
+
+\section{Referencias}
+Para más información se recomienda visitar la \href{https://fire2a.github.io/docs/}{\emph{documentación}}
+
+
+Contacto del desarrollador:
+\\ Fernando Badilla
+\\ fernandobadilla@gmail.com
+\end{document}
